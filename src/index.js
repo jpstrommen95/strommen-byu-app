@@ -35,38 +35,29 @@ function Square(props) {
 }
 
 class Board extends React.Component {
-    constructor(props) {
-        super(props);
+    // state has been lifted to the parent Game component; squares state has been expanded to history
+    // constructor(props) {
+    //     super(props);
+    //
+    //     // component states are immutable: instead of changing what's already there, set it to something new
+    //     // this helps react know when to call render efficiently
+    //     this.state = {
+    //         squares: Array(9).fill(null),
+    //         xIsNext: true,
+    //     };
+    // }
 
-        // component states are immutable: instead of changing what's already there, set it to something new
-        // this helps react know when to call render efficiently
-        this.state = {
-            squares: Array(9).fill(null),
-            xIsNext: true,
-        };
-    }
-
-    renderSquare(i) {
+    renderSquare(index) {
         return <Square
-            value={this.state.squares[i]}
-            onClick={() => this.handleClick(i)}
+            value={this.props.squaresArray[index]}
+            onClick={() => this.props.onClick(index)}
         />;
     }
 
     render() {
-        // check for winner
-        const winner = calculateWinner(this.state.squares);
-        let status;
-        if(winner != null) {
-            status = 'Winner: ' + winner;
-        } else {
-            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-        }
-
-        // render turn
+        // render board state
         return (
             <div>
-                <div className="status">{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -82,44 +73,101 @@ class Board extends React.Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </div>
+            </div>
+        );
+    }
+
+}
+
+class Game extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            history: [
+                {
+                    squares: Array(9).fill(null),
+                }
+            ],
+            xIsNext: true,
+            stepNumber: 0,
+        };
+    }
+
+    render() {
+        // retrieve history
+        const history = this.state.history;
+        const current = history[this.state.stepNumber];
+        // check for winner
+        const winner = calculateWinner(current.squares);
+
+        // list moves
+        const movesArray = history.map((ele, moveIndex) => {
+            const desc = (moveIndex !== 0)
+                ? "Go to move #" + moveIndex
+                : "Go to game start!";
+            return (
+                // key should ALWAYS be used in dynamic list items so react can render efficiently/correctly
+                <li key={moveIndex}>
+                    <button onClick={() => this.jumpTo(moveIndex)}>
+                        {desc}
+                    </button>
+                </li>
+            );
+        });
+
+        let status;
+        if (winner != null) {
+            status = 'Winner: ' + winner;
+        } else {
+            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        }
+
+        // do the render
+        return (
+            <div className="game">
+                <div className="game-board">
+                    <Board
+                        squaresArray={current.squares}
+                        onClick={(squareIndex) => this.handleClick(squareIndex)}
+                    />
+                </div>
+                <div className="game-info">
+                    <div>{status}</div>
+                    <ol>{movesArray}</ol>
+                </div>
             </div>);
     }
 
     handleClick(squareIndex) {
-        const newSquares = this.state.squares.slice();
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        const current = history[history.length - 1];
+        const newSquares = current.squares.slice();
+
         // ignore click if winner
-        if(calculateWinner(newSquares) != null) {
+        if (calculateWinner(newSquares) != null) {
             return;
         }
         // ignore click if already filled
-        if(newSquares[squareIndex] != null) {
+        if (newSquares[squareIndex] != null) {
             return;
         }
         newSquares[squareIndex] = this.state.xIsNext ? 'X' : 'O';
 
         // can't modify state directly, only change happens through setState()
         this.setState({
-            squares: newSquares,
+            history: history.concat([{
+                squares: newSquares,
+            }]),
             xIsNext: !this.state.xIsNext,
+            stepNumber: history.length,
         });
     }
 
-
-
-}
-
-class Game extends React.Component {
-    render() {
-        return (
-            <div className="game">
-                <div className="game-board">
-                    <Board/>
-                </div>
-                <div className="game-info">
-                    <div>{/* status */}</div>
-                    <ol>{/* TODO */}</ol>
-                </div>
-            </div>);
+    jumpTo(moveNum) {
+        this.setState({
+            stepNumber: moveNum,
+            xIsNext: (moveNum % 2) === 0,
+        });
     }
 }
 
