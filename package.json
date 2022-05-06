@@ -1,6 +1,6 @@
 {
   "name": "strommen-byu-app",
-  "homepage": "strommenbyu.com",
+  "homepage": "http://strommenbyu.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
