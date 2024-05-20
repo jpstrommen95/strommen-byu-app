@@ -6,7 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Cheatsheet
 
-- `npm start` launch to local host
+- `npm i` to install node_modules dependencies
+- `npm start` launch app to [http://localhost:3000](http://localhost:3000)
 - `npm test` to run tests
 - `npm run build` to build to production for uploading to host server
 - `npm run eject` use once to customize dependencies for more hands-on
