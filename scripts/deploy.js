@@ -6,7 +6,7 @@ const archiver = require('archiver');
 const path = require('path');
 
 const sourceDir = path.join(__dirname, '../build');
-const outputPath = path.join(__dirname, 'output/public_html.zip');
+const outputPath = path.join(__dirname, 'output/build.zip');
 
 const main = async () => {
   console.log('Starting deploy script.');
