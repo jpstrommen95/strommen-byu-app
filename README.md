@@ -4,7 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Cheatsheet
+
+- `npm i` to install node_modules dependencies
+- `npm start` launch app to [http://localhost:3000](http://localhost:3000)
+- `npm test` to run tests
+- `npm run build` to build to production for uploading to host server
+- `npm run eject` use once to customize dependencies for more hands-on
 
 ### `npm start`
 
