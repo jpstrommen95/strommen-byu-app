@@ -13,6 +13,6 @@ Hosting is done through domains.byu.edu through a service called reclaim hosting
    2. ... > 'dev_html' for dev
 5. Select upload
 6. Select 'Overwrite existing files'
-7. Select `scripts/output/public_html.zip`
+7. Select `scripts/output/build.zip`
 8. Select 'Go back to /home/strommen/...'
 9. Find build.zip > right click > extract > clear the text box, thereby providing no path
