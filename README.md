@@ -8,9 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - `npm i` to install node_modules dependencies
 - `npm run build` to build to production for uploading to host server
+- `npm run deploy` will generate a build zip for uploading to the web hoster
 - `npm run eject` "Not recommended!" use once to customize dependencies for more hands-on
 - `npm run lint` lint with eslint
-- `npm run postbuild` will generate a build zip for uploading to the web hoster
+- `npm run local-checks` run all local-related checks
 - `npm run serve` launch the contents of build directory to [http://localhost:3001](http://localhost:3001)
 - `npm run start` or `npm start` launch app to [http://localhost:3000](http://localhost:3000)
 - `npm run test` or `npm test` to run tests in watch mode

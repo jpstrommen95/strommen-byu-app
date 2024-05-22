@@ -27,7 +27,7 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm run build
+          command: npm run build:ci
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
@@ -49,15 +49,14 @@ jobs:
 workflows:
   do-checks:
     jobs:
-      - lint-node:
+      - build-node:
           requires: []
+      - lint-node:
+          requires:
+            - build-node
       - test-node:
           requires:
             - lint-node
-      - build-node:
-          requires:
-            - test-node
     # - deploy:
     #     requires:
-    #       command: '#e.g. ./deploy.sh'
-    #       - build-node
+    #       - test-node
