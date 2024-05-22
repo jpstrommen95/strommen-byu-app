@@ -15,6 +15,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "echo 'Lint passed trivially!'",
+    "lint:ci": "npm run lint",
     "postbuild": "node ./scripts/deploy.js",
     "serve": "npx serve -s build -l 3001",
     "start": "react-scripts start",
