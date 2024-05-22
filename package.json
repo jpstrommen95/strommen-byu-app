@@ -18,7 +18,8 @@
     "postbuild": "node ./scripts/deploy.js",
     "serve": "npx serve -s build -l 3001",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
-    "archiver": "^7.0.1"
+    "archiver": "^7.0.1",
+    "jest-junit": "^16.0.0"
   }
 }
