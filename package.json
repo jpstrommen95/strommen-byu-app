@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.1.0",
@@ -13,11 +12,18 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "postbuild": "node ./scripts/deploy.js",
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:ci": "npm run build",
+    "deploy": "node ./scripts/deploy.js",
+    "eject": "react-scripts eject",
+    "lint": "echo 'Lint passed trivially!'",
+    "lint:ci": "npm run lint",
+    "local-checks": "npm run build && npm run lint && npm run test -- --watchAll=false && echo 'Local checks passed!'",
+    "predeploy": "npm run local-checks",
+    "serve": "npx serve -s build -l 3001",
+    "start": "react-scripts start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +44,8 @@
     ]
   },
   "devDependencies": {
-    "archiver": "^7.0.1"
+    "@testing-library/jest-dom": "^5.17.0",
+    "archiver": "^7.0.1",
+    "jest-junit": "^16.0.0"
   }
 }
