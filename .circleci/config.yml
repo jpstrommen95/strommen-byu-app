@@ -41,7 +41,8 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: '#e.g. ./deploy.sh'
+          command: 'echo 'Deploy succeeded trivially!''
+          # command: '#e.g. ./deploy.sh'
 workflows:
   build-and-test:
     jobs:
@@ -49,6 +50,7 @@ workflows:
       - build-node:
           requires:
             - test-node
-    # - deploy:
-    #     requires:
-    #       - build-node
+    - deploy:
+        requires:
+          command: '#e.g. ./deploy.sh'
+          - build-node
