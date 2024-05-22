@@ -38,14 +38,15 @@ jobs:
           path: ~/artifacts
           destination: node-build
   deploy:
-    # This is an example deploy job, not actually used by the workflow
     docker:
       - image: cimg/base:stable
     steps:
-      # Replace this with steps to deploy to users
       - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
+          name: Announce Deployment
+          command: "echo Fake deploying from branch name: $CIRCLE_BRANCH!"
+      # - run:
+          # name: Deploy
+          # command: '#e.g. ./deploy.sh'
 workflows:
   do-checks:
     jobs:
@@ -57,10 +58,20 @@ workflows:
       - test-node:
           requires:
             - lint-node
-      - review:
+      - hold-on-approval:
           type: approval
+          filters:
+            branches:
+              only:
+                - prod
+                - dev
           requires:
             - test-node
-    # - deploy:
-    #     requires:
-    #       - review
+      - deploy:
+          filters:
+            branches:
+              only:
+                - prod
+                - dev
+          requires:
+            - review
