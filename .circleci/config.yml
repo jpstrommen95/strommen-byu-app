@@ -55,11 +55,8 @@ workflows:
           requires:
             - build-node
       - test-node:
-          filters:
-            pull_requests:
-              only:
-                - prod
-                - dev
+          requires:
+            - lint-node
       - review:
           type: approval
           requires:
