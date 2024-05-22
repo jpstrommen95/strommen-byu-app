@@ -50,11 +50,35 @@ workflows:
   do-checks:
     jobs:
       - build-node:
+          filters:
+            branches:
+              ignore:
+                - '*'
+            pull_requests:
+              only:
+                - main
+                - develop
           requires: []
       - lint-node:
+          # filters:
+          #   branches:
+          #     ignore:
+          #       - '*'
+          #   pull_requests:
+          #     only:
+          #       - main
+          #       - develop
           requires:
             - build-node
       - test-node:
+          filters:
+            branches:
+              ignore:
+                - '*'
+            pull_requests:
+              only:
+                - main
+                - develop
           requires:
             - lint-node
     # - deploy:
