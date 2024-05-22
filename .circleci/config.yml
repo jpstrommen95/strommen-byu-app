@@ -74,4 +74,4 @@ workflows:
                 - prod
                 - dev
           requires:
-            - review
+            - hold-on-approval
