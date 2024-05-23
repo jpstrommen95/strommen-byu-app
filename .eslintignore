@@ -1,0 +1,11 @@
+# Ignore the 'node_modules' directory
+node_modules/
+
+# Ignore the 'dist' directory
+dist/
+
+# Ignore minified files
+*.min.js
+
+# Ignore build output
+build/
