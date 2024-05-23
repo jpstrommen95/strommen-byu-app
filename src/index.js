@@ -26,10 +26,6 @@ import './index.css';
 
 // since Square doesn't keep its own state, it can be a function component
 function Square(props) {
-
-
-  
-  const test = 'hi';  
   return <button
     className="square"
     onClick={props.onClick}
