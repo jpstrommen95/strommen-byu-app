@@ -46,6 +46,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "archiver": "^7.0.1",
+    "eslint": "^9.3.0",
+    "eslint-plugin-react": "^7.34.1",
     "jest-junit": "^16.0.0"
   }
 }
