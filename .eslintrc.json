@@ -5,6 +5,8 @@
     "node": true
   },
   "extends": [
+    "airbnb",
+    "airbnb/hooks",
     "eslint:recommended",
     "plugin:react/recommended"
   ],
@@ -24,7 +26,8 @@
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "no-unused-vars": ["warn"],
-    "react/prop-types": "off"
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {

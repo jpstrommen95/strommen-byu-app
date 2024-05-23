@@ -1,5 +1,6 @@
 // A helper script for `npm run build`.
 // isolated usage: `node ./scripts/deploy.js`
+/* eslint-disable no-console */
 
 const fs = require('fs');
 const archiver = require('archiver');
@@ -18,7 +19,7 @@ const main = async () => {
 
   // Set up listeners
   writeStream.on('close', () => {
-    console.log(archive.pointer() + ' total bytes');
+    console.log(`${archive.pointer()} total bytes`);
     console.log('Archiver has been finalized and the output file descriptor has closed.');
   });
   archive.on('error', (err) => { throw err; });
@@ -29,4 +30,4 @@ const main = async () => {
   archive.finalize();
 };
 
-(async () => (await main()))();
+await (async () => (main()))();
