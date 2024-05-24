@@ -16,7 +16,7 @@ const { createLogger, stdSerializers } = require('bunyan');
  * @property {Array} streams - Streams for log output destinations.
  */
 const logger = createLogger({
-  name: 'myapp', // Name of the logger, change as appropriate
+  name: 'strommen-byu-logger-app', // Name of the logger, change as appropriate
   level: 'info', // Log level (can be 'fatal', 'error', 'warn', 'info', 'debug', 'trace')
   serializers: stdSerializers, // support for common objects like Error
   streams: [
