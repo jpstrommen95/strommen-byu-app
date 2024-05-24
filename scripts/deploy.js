@@ -4,13 +4,14 @@
 const fs = require('fs');
 const archiver = require('archiver');
 const path = require('path');
+const logger = require('./logger');
 
 const sourceDir = path.join(__dirname, '../build');
 const outputPath = path.join(__dirname, 'output/build.zip');
 
 const main = async () => {
-  console.log('Starting deploy script.');
-  console.log(`Zipping ${sourceDir} to ${outputPath}`);
+  logger.info('Starting deploy script.');
+  logger.info(`Zipping ${sourceDir} to ${outputPath}`);
 
   // Create a file to stream archive data to
   const writeStream = fs.createWriteStream(outputPath);
@@ -18,8 +19,9 @@ const main = async () => {
 
   // Set up listeners
   writeStream.on('close', () => {
-    console.log(archive.pointer() + ' total bytes');
-    console.log('Archiver has been finalized and the output file descriptor has closed.');
+    logger.info(`${archive.pointer()} total bytes`);
+    logger.info('Archiver has been finalized and the output file descriptor has closed.');
+    logger.error('test error');
   });
   archive.on('error', (err) => { throw err; });
 
@@ -29,4 +31,4 @@ const main = async () => {
   archive.finalize();
 };
 
-(async () => (await main()))();
+(async () => (main()))();
