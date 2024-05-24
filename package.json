@@ -25,7 +25,7 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
     "lint:ci": "npm run lint",
-    "local-checks": "npm run build && npm run lint && npm run test:local -- --watchAll=false && echo 'Local checks passed!'",
+    "local-checks": "npm run build && npm run lint && npm run test:ci && echo 'Local checks passed!'",
     "predeploy": "npm run local-checks",
     "serve": "npx serve -s build -l 3001",
     "start": "react-scripts start",
