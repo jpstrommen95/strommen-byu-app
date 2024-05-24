@@ -66,7 +66,7 @@ export default class Game extends React.Component {
     const newSquares = current.squares.slice();
 
     // ignore click if winner
-    if (this.calculateWinner(newSquares) != null) {
+    if (Game.calculateWinner(newSquares) != null) {
       return;
     }
     // ignore click if already filled
@@ -97,7 +97,7 @@ export default class Game extends React.Component {
     const { history, stepNumber, xIsNext } = this.state;
     const current = history[stepNumber];
     // check for winner
-    const winner = this.calculateWinner(current.squares);
+    const winner = Game.calculateWinner(current.squares);
 
     // list moves
     const movesArray = history.map((ele, moveIndex) => {

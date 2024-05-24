@@ -37,7 +37,7 @@ class Board extends React.Component {
   }
 }
 
-Board.renderSquare.propTypes = {
+Board.propTypes = {
   squaresArray: PropTypes.arrayOf(Square).isRequired,
   onClick: PropTypes.func.isRequired,
 };
