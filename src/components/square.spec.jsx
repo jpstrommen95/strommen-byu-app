@@ -8,7 +8,12 @@ import Square from './square';
 const mockOnClick = jest.fn();
 
 function mockSquare({ value }) {
-  return <Square onClick={mockOnClick} value={value} />;
+  return (
+    <Square
+      onClick={mockOnClick}
+      value={value}
+    />
+  );
 }
 
 describe('Square', () => {
