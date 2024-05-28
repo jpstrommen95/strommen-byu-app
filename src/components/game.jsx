@@ -1,9 +1,10 @@
 import React from 'react';
 import ordinal from 'ordinal';
 import Board from './board';
+import logger from '../../scripts/logger';
 
 export default class Game extends React.Component {
-  static getWinner(lineToCheck, squares) {
+  static getWinner({ lineToCheck, squares }) {
     const [a, b, c] = lineToCheck;
     if (this.isThreeWayMatch(squares[a], squares[b], squares[c])) {
       return squares[a];
@@ -13,7 +14,7 @@ export default class Game extends React.Component {
   }
 
   static isThreeWayMatch(a, b, c) {
-    return a && a === b && a === c;
+    return !!(a && a === b && a === c);
   }
 
   static calculateWinner(squares) {
@@ -40,9 +41,15 @@ export default class Game extends React.Component {
       ...diagonalLines,
     ];
 
-    return allLines
-      .map((lineToCheck) => this.getWinner(lineToCheck, squares))
-      .find((winner) => winner !== null) || null;
+    const winnersByLine = allLines.map((lineToCheck) => this.getWinner({ lineToCheck, squares }));
+    const overallWinner = winnersByLine.find((winner) => winner !== null) || null;
+    logger.debug({
+      firstLine: allLines[0],
+      winnersByLine,
+      overallWinner,
+    });
+
+    return overallWinner;
   }
 
   constructor(props) {
