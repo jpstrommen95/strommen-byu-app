@@ -21,12 +21,29 @@ const logger = createLogger({
   serializers: stdSerializers, // support for common objects like Error
   streams: [
     {
-      level: 'info', // Log level for this stream
-      stream: process.stdout, // Log to the console
+      level: 'fatal',
+      path: 'logs/fatal.log',
     },
     {
       level: 'error', // Log level for this stream
-      path: 'error.log', // Log errors to a file
+      path: 'logs/error.log', // Log errors to a file
+    },
+    {
+      level: 'warn',
+      path: 'logs/warn.log',
+    },
+    {
+      level: 'info', // Log level for this stream
+      path: 'logs/info.log',
+      stream: process.stdout, // Log to the console
+    },
+    {
+      level: 'debug',
+      path: 'logs/debug.log',
+    },
+    {
+      level: 'trace',
+      path: 'logs/trace.log',
     },
   ],
 });
