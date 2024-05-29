@@ -3,7 +3,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/src/__mocks__/fileMock.js',
+    // '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/src/__mocks__/fileMock.js',
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
@@ -24,6 +24,7 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/serviceWorker.js',
     '!src/setupTests.js',
+    '!src/index.jsx',
   ],
   coverageReporters: ['html', 'text'],
 };
