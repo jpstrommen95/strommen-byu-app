@@ -10,7 +10,6 @@
     "deploy": "node ./scripts/deploy.js",
     "eject": "react-scripts eject",
     "hello-world": "echo Hello World!",
-    "hello-world-2": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
     "lint:ci": "npm run lint",
     "lint:fix": "npm run lint -- --fix",

@@ -22,8 +22,7 @@
   ],
   "scripts": {
     "hello-world": "echo Hello World!",
-    "sort-package-json": "npx sort-package-json",
-    "test": "node ./__tests__/@strommenbyu/mocks.test.js"
+    "sort-package-json": "npx sort-package-json"
   },
   "devDependencies": {
     "sort-package-json": "^2.10.0"
