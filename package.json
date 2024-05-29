@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://strommenbyu.com",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "craco build",
     "build:ci": "npm run build",
     "predeploy": "npm run local-checks",
     "deploy": "node ./scripts/deploy.js",
@@ -15,9 +15,9 @@
     "lint:quiet": "npm run lint -- --quiet",
     "local-checks": "npm run build && npm run lint && npm run test:ci && echo 'Local checks passed!'",
     "serve": "npx serve -s build -l 3001",
-    "start": "react-scripts start",
-    "test:ci": "react-scripts test -- --config=jest.config.js --ci",
-    "test:local": "react-scripts test"
+    "start": "craco start",
+    "test:ci": "craco test -- --config=jest.config.js --ci",
+    "test:local": "craco test"
   },
   "browserslist": {
     "production": [
@@ -38,13 +38,19 @@
     ]
   },
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "archiver": "^7.0.1",
+    "assert": "^2.1.0",
+    "browserify-fs": "^1.0.0",
     "bunyan": "^1.8.15",
     "ordinal": "^1.0.3",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "stream-browserify": "^3.0.0",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-const { createLogger, stdSerializers } = require('bunyan');
+import { createLogger, stdSerializers } from 'bunyan';
 
 /**
  * Creates and configures a Bunyan logger instance.
@@ -48,4 +48,4 @@ const logger = createLogger({
   ],
 });
 
-module.exports = logger;
+export default logger;

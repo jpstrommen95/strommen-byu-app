@@ -1,7 +1,7 @@
 import React from 'react';
 import ordinal from 'ordinal';
 import Board from './board';
-import logger from '../../scripts/logger';
+import logger from '../utils/logger';
 
 export default class Game extends React.Component {
   static getWinner({ lineToCheck, squares }) {
