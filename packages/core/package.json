@@ -1,8 +1,9 @@
 {
   "name": "@strommen-byu/core",
   "version": "0.0.0",
+  "private": true,
   "description": "A set of core node module utilities for strommenbyu.com",
-  "homepage": "http://strommenbyu.com",
+  "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
   "bugs": {
     "url": "https://github.com/jpstrommen95/strommen-byu-app/issues"
   },
@@ -23,9 +24,6 @@
   "scripts": {
     "hello-world": "echo Hello World!",
     "sort-package-json": "npx sort-package-json"
-  },
-  "devDependencies": {
-    "sort-package-json": "^2.10.0"
   },
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,18 @@
 {
   "name": "@strommen-byu/root",
+  "version": "0.0.0",
   "private": true,
+  "description": "Root project to manage all strommenbyu.com packages.",
+  "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
+  "bugs": {
+    "url": "https://github.com/jpstrommen95/strommen-byu-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpstrommen95/strommen-byu-app.git"
+  },
+  "license": "MIT",
+  "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
   "workspaces": [
     "packages/*"
   ],
@@ -8,10 +20,27 @@
     "hello-world": "echo Hello World!",
     "sort-package-json": "npx sort-package-json"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-react": "^7.24.6",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "glob": "^10.4.1",
+    "jest": "^28.0.0",
+    "jest-junit": "^16.0.0",
     "lerna": "^8.1.3",
     "nx": "^19.1.1",
+    "react-scripts": "5.0.1",
     "sort-package-json": "^2.10.0"
   }
 }

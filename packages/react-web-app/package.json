@@ -2,13 +2,24 @@
   "name": "@strommen-byu/react-web-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://strommenbyu.com",
+  "description": "React App for strommenbyu.com web application.",
+  "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
+  "bugs": {
+    "url": "https://github.com/jpstrommen95/strommen-byu-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpstrommen95/strommen-byu-app.git"
+  },
+  "license": "MIT",
+  "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "npx react-scripts build",
     "build:ci": "npm run build",
     "predeploy": "npm run local-checks",
     "deploy": "node ./scripts/deploy.js",
-    "eject": "react-scripts eject",
+    "eject": "npx react-scripts eject",
     "hello-world": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
     "lint:ci": "npm run lint",
@@ -17,9 +28,9 @@
     "local-checks": "npm run build && npm run lint && npm run test:ci && echo 'Local checks passed!'",
     "serve": "npx serve -s build -l 3001",
     "sort-package-json": "npx sort-package-json",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "test:ci": "react-scripts test -- --config=jest.config.js --ci"
+    "start": "npx react-scripts start",
+    "test": "npx react-scripts test",
+    "test:ci": "npx react-scripts test -- --config=jest.config.js --ci"
   },
   "browserslist": {
     "production": [
@@ -47,24 +58,5 @@
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.24.6",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/preset-env": "^7.24.6",
-    "@babel/preset-react": "^7.24.6",
-    "@jest/globals": "^29.7.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "jest": "^29.7.0",
-    "jest-junit": "^16.0.0",
-    "sort-package-json": "^2.10.0"
   }
 }

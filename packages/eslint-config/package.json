@@ -1,6 +1,7 @@
 {
   "name": "@strommen-byu/eslint-config",
   "version": "0.0.0",
+  "private": true,
   "description": "Custom lint config for strommenbyu.com project.",
   "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
   "bugs": {
@@ -12,7 +13,7 @@
   },
   "license": "MIT",
   "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
-  "main": "lib/eslint-config.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -23,8 +24,5 @@
   "scripts": {
     "hello-world": "echo Hello World!",
     "sort-package-json": "npx sort-package-json"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
