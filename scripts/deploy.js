@@ -4,7 +4,7 @@
 const fs = require('fs');
 const archiver = require('archiver');
 const path = require('path');
-const logger = require('./logger');
+const logger = require('../src/utils/logger');
 
 const sourceDir = path.join(__dirname, '../build');
 const outputPath = path.join(__dirname, 'output/build.zip');

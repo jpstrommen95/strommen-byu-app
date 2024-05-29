@@ -13,8 +13,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `npm run lint` lint with eslint
 - `npm run local-checks` run all local-related checks
 - `npm run serve` launch the contents of build directory to [http://localhost:3001](http://localhost:3001)
-- `npm run start` or `npm start` launch app to [http://localhost:3000](http://localhost:3000)
-- `npm run test` or `npm test` to run tests in watch mode
+- `npm run start` launch app to [http://localhost:3000](http://localhost:3000)
+- `npm run test:local` run tests in watch mode (`npm run test:local square` to filter to square test files)
 
 ### `npm start`
 

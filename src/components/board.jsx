@@ -16,7 +16,7 @@ class Board extends React.Component {
   render() {
     // render board state
     return (
-      <div>
+      <div data-testid="board-base">
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
