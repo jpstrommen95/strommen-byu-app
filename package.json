@@ -1,42 +1,23 @@
 {
   "name": "strommen-byu-app",
-  "homepage": "http://strommenbyu.com",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "archiver": "^7.0.1",
-    "bunyan": "^1.8.15",
-    "ordinal": "^1.0.3",
-    "prop-types": "^15.8.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "homepage": "http://strommenbyu.com",
   "scripts": {
     "build": "react-scripts build",
     "build:ci": "npm run build",
+    "predeploy": "npm run local-checks",
     "deploy": "node ./scripts/deploy.js",
     "eject": "react-scripts eject",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
+    "lint:ci": "npm run lint",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
-    "lint:ci": "npm run lint",
-    "local-checks": "npm run build && npm run lint && npm run test -- --watchAll=false && echo 'Local checks passed!'",
-    "predeploy": "npm run local-checks",
+    "local-checks": "npm run build && npm run lint && npm run test:ci && echo 'Local checks passed!'",
     "serve": "npx serve -s build -l 3001",
     "start": "react-scripts start",
-    "test": "react-scripts test",
-    "test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "test:ci": "react-scripts test -- --config=jest.config.js --ci",
+    "test:local": "react-scripts test"
   },
   "browserslist": {
     "production": [
@@ -50,8 +31,30 @@
       "last 1 safari version"
     ]
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "ordinal": "^1.0.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-react": "^7.24.6",
     "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.3",
@@ -59,6 +62,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^29.7.0",
-    "jest-junit": "^16.0.0"
+    "jest-junit": "^16.0.0",
+    "sort-package-json": "^2.10.0"
   }
 }
