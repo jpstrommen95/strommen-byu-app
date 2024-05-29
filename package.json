@@ -42,5 +42,8 @@
     "nx": "^19.1.1",
     "react-scripts": "5.0.1",
     "sort-package-json": "^2.10.0"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.15"
   }
 }

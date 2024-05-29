@@ -1,7 +1,5 @@
-'use strict';
+import logger from "./logger";
 
-module.exports = core;
-
-function core() {
-  return 'Hello from core';
-}
+module.exports = {
+  logger,
+};
