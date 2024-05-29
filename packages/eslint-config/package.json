@@ -24,5 +24,8 @@
   "scripts": {
     "hello-world": "echo Hello World!",
     "sort-package-json": "npx sort-package-json"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

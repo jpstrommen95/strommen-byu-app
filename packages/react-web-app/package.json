@@ -32,6 +32,9 @@
     "test": "npx react-scripts test",
     "test:ci": "npx react-scripts test -- --config=jest.config.js --ci"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

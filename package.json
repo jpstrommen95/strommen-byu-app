@@ -20,6 +20,10 @@
     "hello-world": "echo Hello World!",
     "sort-package-json": "npx sort-package-json"
   },
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "npm": "^10.8.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.6",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -42,8 +46,5 @@
     "nx": "^19.1.1",
     "react-scripts": "5.0.1",
     "sort-package-json": "^2.10.0"
-  },
-  "dependencies": {
-    "bunyan": "^1.8.15"
   }
 }

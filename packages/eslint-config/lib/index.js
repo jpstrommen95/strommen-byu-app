@@ -1,7 +1,3 @@
-'use strict';
+const eslintrc = require('./.eslintrc.js');
 
-module.exports = eslintConfig;
-
-function eslintConfig() {
-  return 'Hello from eslintConfig';
-}
+module.exports = eslintrc;
