@@ -1,5 +1,5 @@
 {
-  "name": "strommen-byu-app",
+  "name": "@strommen-byu/react-web-app",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://strommenbyu.com",
@@ -9,15 +9,18 @@
     "predeploy": "npm run local-checks",
     "deploy": "node ./scripts/deploy.js",
     "eject": "react-scripts eject",
+    "hello-world": "echo Hello World!",
+    "hello-world-2": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
     "lint:ci": "npm run lint",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
     "local-checks": "npm run build && npm run lint && npm run test:ci && echo 'Local checks passed!'",
     "serve": "npx serve -s build -l 3001",
+    "sort-package-json": "npx sort-package-json",
     "start": "react-scripts start",
-    "test:ci": "react-scripts test -- --config=jest.config.js --ci",
-    "test:local": "react-scripts test"
+    "test": "react-scripts test",
+    "test:ci": "react-scripts test -- --config=jest.config.js --ci"
   },
   "browserslist": {
     "production": [
