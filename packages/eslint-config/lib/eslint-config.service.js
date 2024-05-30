@@ -1,28 +1,28 @@
 export default {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
   },
-  "extends": [
+  extends: [
     "airbnb",
     "airbnb/hooks",
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    ecmaVersion: "latest",
+    sourceType: "module"
   },
-  "plugins": [
+  plugins: [
     "react"
   ],
-  "settings": {
-    "react": {
-      "version": "detect"
+  settings: {
+    react: {
+      version: "detect"
     }
   }
 };
