@@ -1,11 +1,3 @@
-# `@strommenbyu/mocks`
+# `@strommen-byu/mocks`
 
-> TODO: description
-
-## Usage
-
-```
-const mocks = require('@strommenbyu/mocks');
-
-// TODO: DEMONSTRATE API
-```
+See package.json
