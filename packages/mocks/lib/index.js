@@ -1,7 +1,5 @@
-'use strict';
+function mocks() {
+  throw new Error('Not yet implemented!');
+}
 
 module.exports = mocks;
-
-function mocks() {
-  return 'Hello from mocks';
-}
