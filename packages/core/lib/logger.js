@@ -28,7 +28,7 @@ const logger = bunyan.createLogger({
       level: 'fatal',
       path: 'logs/fatal.log',
     },
-  ]
+  ],
 });
 
 export default logger;

@@ -28,5 +28,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.15"
   }
 }
