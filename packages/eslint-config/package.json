@@ -1,6 +1,6 @@
 {
   "name": "@strommen-byu/eslint-config",
-  "version": "0.1.2-alpha.0",
+  "version": "0.1.2-alpha.1",
   "private": false,
   "description": "Custom lint config for strommenbyu.com project.",
   "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
