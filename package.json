@@ -17,8 +17,17 @@
     "packages/*"
   ],
   "scripts": {
-    "hello-world": "echo Hello World!",
-    "sort-package-json": "npx sort-package-json"
+    "build": "lerna run build",
+    "build:ci": "lerna run build:ci",
+    "deploy": "echo Deploy not yet implemented!",
+    "deploy:ci": "echo Deploy for CI not yet implemented!",
+    "lint": "lerna run lint",
+    "lint:ci": "lerna run lint:ci",
+    "publish": "echo Publish not yet implemented!",
+    "sort-package-json": "npx sort-package-json && lerna run sort-package-json",
+    "sort-package-json:solo": "npx sort-package-json",
+    "test": "lerna run test",
+    "test:ci": "lerna run test:ci"
   },
   "dependencies": {
     "bunyan": "^1.8.15",

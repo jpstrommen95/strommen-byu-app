@@ -22,6 +22,7 @@
     "lib"
   ],
   "scripts": {
+    "build": "node .",
     "hello-world": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
     "sort-package-json": "npx sort-package-json"
