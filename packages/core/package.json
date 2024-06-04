@@ -1,7 +1,7 @@
 {
   "name": "@strommen-byu/core",
   "version": "0.1.0-alpha.0",
-  "private": true,
+  "private": false,
   "description": "A set of core node module utilities for strommenbyu.com",
   "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
   "bugs": {
