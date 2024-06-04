@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
+  "type": "module",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -22,7 +23,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "node .",
+    "build": "node --experimental-loader=./loader.js .",
     "hello-world": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
     "sort-package-json": "npx sort-package-json"
@@ -32,5 +33,10 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "extensionless": {
+    "lookFor": [
+      "js"
+    ]
   }
 }

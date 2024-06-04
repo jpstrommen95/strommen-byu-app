@@ -1,2 +1,12 @@
+# Logs
+logs/*
+!logs/readme.md
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Node
 node_modules/
 **/.npmrc

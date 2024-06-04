@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "bunyan": "^1.8.15",
+    "extensionless": "^1.9.9",
     "npm": "^10.8.1"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import logger from './logger';
 
-module.exports = {
+export default {
   logger,
 };
