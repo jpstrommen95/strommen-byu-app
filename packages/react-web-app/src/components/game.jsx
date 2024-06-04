@@ -1,7 +1,7 @@
 import React from 'react';
 import ordinal from 'ordinal';
+import core from '@strommen-byu/core';
 import Board from './board';
-import logger from '../utils/logger';
 
 export default class Game extends React.Component {
   static getWinner({ lineToCheck, squares }) {
@@ -43,7 +43,7 @@ export default class Game extends React.Component {
 
     const winnersByLine = allLines.map((lineToCheck) => this.getWinner({ lineToCheck, squares }));
     const overallWinner = winnersByLine.find((winner) => winner !== null) || null;
-    logger.debug({
+    core.logger.debug({
       firstLine: allLines[0],
       winnersByLine,
       overallWinner,
