@@ -1,6 +1,6 @@
 {
   "name": "@strommen-byu/eslint-config-typescript",
-  "version": "0.1.3-alpha.0",
+  "version": "0.2.0-alpha.0",
   "private": false,
   "description": "Custom lint config for strommenbyu.com project.",
   "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
