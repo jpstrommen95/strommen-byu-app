@@ -2,5 +2,8 @@
   "extends": [
     "@strommen-byu/eslint-config",
     "next/core-web-vitals"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }
