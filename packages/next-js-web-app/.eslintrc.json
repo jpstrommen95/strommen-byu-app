@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "@strommen-byu/eslint-config",
+    "next/core-web-vitals"
+  ]
 }
