@@ -1,6 +1,6 @@
 {
   "name": "@strommen-byu/next-js-web-app",
-  "version": "0.2.0-alpha.0",
+  "version": "0.3.0-alpha.0",
   "private": true,
   "description": "React App for strommenbyu.com web application.",
   "scripts": {
