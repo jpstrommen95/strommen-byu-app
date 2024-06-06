@@ -30,11 +30,11 @@
     "lint:ci": "npm run lint",
     "sort-package-json": "npx sort-package-json"
   },
+  "dependencies": {
+    "eslint": "^8"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "gitHead": "787c31f48f7fa95ad26d03e187ef547b3e2c7537",
-  "dependencies": {
-    "eslint": "^8"
-  }
+  "gitHead": "787c31f48f7fa95ad26d03e187ef547b3e2c7537"
 }
