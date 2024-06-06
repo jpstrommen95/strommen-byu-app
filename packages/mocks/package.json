@@ -25,6 +25,7 @@
     "build": "node .",
     "hello-world": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
+    "lint:ci": "npm run lint",
     "sort-package-json": "npx sort-package-json"
   },
   "publishConfig": {
