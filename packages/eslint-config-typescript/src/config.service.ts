@@ -3,6 +3,7 @@ import { Linter } from 'eslint';
 const config: Linter.Config = {
   parser: '@typescript-eslint/parser',
   extends: [
+    '@strommen-byu/eslint-config',
     'airbnb-typescript',
   ],
   parserOptions: {
