@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@strommen-byu/eslint-config-typescript",
+    "next/core-web-vitals"
+  ]
+}

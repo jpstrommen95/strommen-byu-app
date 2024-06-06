@@ -1,0 +1,36 @@
+{
+  "name": "@strommen-byu/eslint-config",
+  "version": "0.3.0-alpha.0",
+  "private": false,
+  "description": "Custom lint config for strommenbyu.com project.",
+  "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
+  "bugs": {
+    "url": "https://github.com/jpstrommen95/strommen-byu-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpstrommen95/strommen-byu-app.git"
+  },
+  "license": "MIT",
+  "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node .",
+    "build:ci": "npm run build",
+    "hello-world": "echo Hello World!",
+    "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
+    "lint:ci": "npm run lint",
+    "sort-package-json": "npx sort-package-json"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "gitHead": "787c31f48f7fa95ad26d03e187ef547b3e2c7537"
+}

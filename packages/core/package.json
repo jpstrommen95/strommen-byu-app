@@ -1,0 +1,44 @@
+{
+  "name": "@strommen-byu/core",
+  "version": "0.3.0-alpha.0",
+  "private": false,
+  "description": "A set of core node module utilities for strommenbyu.com",
+  "homepage": "https://github.com/jpstrommen95/strommen-byu-app#readme",
+  "bugs": {
+    "url": "https://github.com/jpstrommen95/strommen-byu-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpstrommen95/strommen-byu-app.git"
+  },
+  "license": "MIT",
+  "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
+  "type": "module",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node --experimental-loader=./loader.js .",
+    "build:ci": "npm run build",
+    "hello-world": "echo Hello World!",
+    "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
+    "lint:ci": "npm run lint",
+    "sort-package-json": "npx sort-package-json"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.15"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "extensionless": {
+    "lookFor": [
+      "js"
+    ]
+  }
+}

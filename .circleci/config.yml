@@ -27,6 +27,10 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
+          name: Install optional Dependencies
+          command: npm ci --include=optional
+      - run:
+          name: Run project's build scripts
           command: npm run build:ci
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
