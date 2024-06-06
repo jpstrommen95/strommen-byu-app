@@ -13,7 +13,8 @@
   },
   "license": "MIT",
   "author": "jpstrommen95 <55213152+jpstrommen95@users.noreply.github.com>",
-  "main": "src/index.ts",
+  "type": "commonjs",
+  "main": "dist/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -22,13 +23,19 @@
     "lib"
   ],
   "scripts": {
-    "build": "npx ts-node .",
+    "build": "npx tsc",
     "hello-world": "echo Hello World!",
-    "lint": "npx eslint . --ext .js,.jsx --max-warnings 0",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "sort-package-json": "npx sort-package-json"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "gitHead": "787c31f48f7fa95ad26d03e187ef547b3e2c7537"
+  "gitHead": "787c31f48f7fa95ad26d03e187ef547b3e2c7537",
+  "dependencies": {
+    "eslint": "^8.57.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.10"
+  }
 }

@@ -1,3 +1,3 @@
-import eslintrc from './.eslintrc';
+import configService from './config.service';
 
-export default eslintrc;
+module.exports = configService;

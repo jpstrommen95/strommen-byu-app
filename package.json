@@ -33,7 +33,8 @@
     "@strommen-byu/core": "^0.1.3-alpha.0",
     "bunyan": "^1.8.15",
     "extensionless": "^1.9.9",
-    "npm": "^10.8.1"
+    "npm": "^10.8.1",
+    "eslint": "^8.57.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.6",
@@ -48,7 +49,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
-    "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-plugin-import": "^2.29.1",
@@ -61,6 +61,7 @@
     "jest-junit": "^16.0.0",
     "lerna": "^8.1.3",
     "nx": "^19.1.1",
-    "sort-package-json": "^2.10.0"
+    "sort-package-json": "^2.10.0",
+    "typescript": "^5.4.5"
   }
 }
