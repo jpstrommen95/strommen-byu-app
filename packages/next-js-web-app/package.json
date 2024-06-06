@@ -5,6 +5,7 @@
   "description": "React App for strommenbyu.com web application.",
   "scripts": {
     "build": "next build",
+    "build:ci": "npm run build",
     "dev": "next dev",
     "lint": "next lint",
     "lint:ci": "npm run lint",

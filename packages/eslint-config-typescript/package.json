@@ -24,6 +24,7 @@
   ],
   "scripts": {
     "build": "npx tsc",
+    "build:ci": "npm run build",
     "hello-world": "echo Hello World!",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "lint:ci": "npm run lint",
