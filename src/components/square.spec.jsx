@@ -36,7 +36,7 @@ describe('square', () => {
   });
 
   it('onClick action is performed when button is clicked', () => {
-    expect.assertions(1);
+    expect.assertions(2);
     // GIVEN
     const { getByRole } = render(mockSquare({}));
     const buttonElement = getByRole('button');
@@ -46,6 +46,6 @@ describe('square', () => {
     fireEvent.click(buttonElement);
 
     // THEN
-    expect(mockOnClick).toHaveBeenCalledWith();
+    expect(mockOnClick).toHaveBeenCalledWith(expect.anything());
   });
 });

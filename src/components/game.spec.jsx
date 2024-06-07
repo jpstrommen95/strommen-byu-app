@@ -138,7 +138,7 @@ describe('game', () => {
   describe('render', () => {
     describe('empty state', () => {
       it('should render the board with empty state', () => {
-        expect.assertions(1);
+        expect.assertions(10);
         // WHEN
         render(mockGame());
         const squares = screen.getAllByRole('button', { name: '' });
@@ -167,7 +167,7 @@ describe('game', () => {
       });
 
       it('should render game info with a status of X to go next (first)', () => {
-        expect.assertions(1);
+        expect.assertions(2);
         // WHEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -180,7 +180,7 @@ describe('game', () => {
 
     describe('one move state', () => {
       it('should display O to go next', () => {
-        expect.assertions(1);
+        expect.assertions(2);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -195,7 +195,7 @@ describe('game', () => {
       });
 
       it('should display game start and move #1 history', () => {
-        expect.assertions(1);
+        expect.assertions(7);
         // GIVEN
         render(mockGame());
         const gameStartButton = screen.queryByRole('button', { name: /go to game start/i });
@@ -218,7 +218,7 @@ describe('game', () => {
       });
 
       it('should display a board where X has placed a move', () => {
-        expect.assertions(1);
+        expect.assertions(2);
         // GIVEN
         render(mockGame());
         const squares = screen.getAllByRole('button', { name: '' });
@@ -232,7 +232,7 @@ describe('game', () => {
       });
 
       it('should still say O is next, if O clicks on X\'s first move', () => {
-        expect.assertions(1);
+        expect.assertions(3);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -249,7 +249,7 @@ describe('game', () => {
       });
 
       it('should clear the board when clicking \'go to game start\' after the first move', () => {
-        expect.assertions(1);
+        expect.assertions(3);
         // GIVEN
         render(mockGame());
         const squares = screen.getAllByRole('button', { name: '' });
@@ -268,7 +268,7 @@ describe('game', () => {
 
     describe('winner state', () => {
       it('should display winner status after winning move', () => {
-        expect.assertions(1);
+        expect.assertions(2);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -287,7 +287,7 @@ describe('game', () => {
       });
 
       it('should display winner status even after post-win clicks', () => {
-        expect.assertions(1);
+        expect.assertions(2);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);

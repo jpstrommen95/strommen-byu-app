@@ -50,7 +50,7 @@ describe('board', () => {
   });
 
   it('should run the square\'s onClick action', () => {
-    expect.assertions(1);
+    expect.assertions(2);
     // GIVEN
     render(mockBoard());
     const someSquare = screen.getAllByRole('button', { name: 'test' })[0];
@@ -60,6 +60,6 @@ describe('board', () => {
     fireEvent.click(someSquare);
 
     // THEN
-    expect(mockOnClick).toHaveBeenCalledWith();
+    expect(mockOnClick).toHaveBeenCalledWith(expect.anything());
   });
 });
