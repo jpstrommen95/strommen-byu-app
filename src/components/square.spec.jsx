@@ -16,14 +16,16 @@ function mockSquare({ value }) {
   );
 }
 
-describe('Square', () => {
+describe('square', () => {
   it('renders a button', () => {
+    expect.assertions(1);
     render(mockSquare({}));
     const buttonElement = screen.getByRole('button');
     expect(buttonElement).toBeInTheDocument();
   });
 
   it('contains the content \'X\'', () => {
+    expect.assertions(2);
     // WHEN
     render(mockSquare({ value: 'X' }));
     const buttonElement = screen.getByRole('button');
@@ -34,6 +36,7 @@ describe('Square', () => {
   });
 
   it('onClick action is performed when button is clicked', () => {
+    expect.assertions(1);
     // GIVEN
     const { getByRole } = render(mockSquare({}));
     const buttonElement = getByRole('button');
@@ -43,6 +46,6 @@ describe('Square', () => {
     fireEvent.click(buttonElement);
 
     // THEN
-    expect(mockOnClick).toHaveBeenCalled();
+    expect(mockOnClick).toHaveBeenCalledWith();
   });
 });

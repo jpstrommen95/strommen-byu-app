@@ -9,7 +9,7 @@ function mockGame() {
   return <Game />;
 }
 
-describe('Game', () => {
+describe('game', () => {
   describe('isThreeWayMatch', () => {
     it.each([
       {
@@ -27,6 +27,7 @@ describe('Game', () => {
     ])('should return $expected if $desc', ({
       a, b, c, expected,
     }) => {
+      expect.assertions(1);
       const result = Game.isThreeWayMatch(a, b, c);
       expect(result).toBe(expected);
     });
@@ -80,6 +81,7 @@ describe('Game', () => {
         desc: 'should prioritize top line winner (\'X\') in an unrealistic dual-winner edge case',
       },
     ])('$desc', ({ squares, expected }) => {
+      expect.assertions(1);
       const result = Game.calculateWinner(squares);
       expect(result).toBe(expected);
     });
@@ -91,6 +93,7 @@ describe('Game', () => {
     const diagonalLine = [0, 4, 8];
 
     it('should return X if X has won on the top line', () => {
+      expect.assertions(1);
       const result = Game.getWinner({
         lineToCheck: topLine,
         squares: [
@@ -104,6 +107,7 @@ describe('Game', () => {
     });
 
     it('should return O if O has won on the right line', () => {
+      expect.assertions(1);
       const result = Game.getWinner({
         lineToCheck: rightLine,
         squares: [
@@ -117,6 +121,7 @@ describe('Game', () => {
     });
 
     it('should return null if neither X nor O has won on the diagonal line', () => {
+      expect.assertions(1);
       const result = Game.getWinner({
         lineToCheck: diagonalLine,
         squares: [
@@ -126,13 +131,14 @@ describe('Game', () => {
         ],
       });
 
-      expect(result).toBe(null);
+      expect(result).toBeNull();
     });
   });
 
   describe('render', () => {
     describe('empty state', () => {
       it('should render the board with empty state', () => {
+        expect.assertions(1);
         // WHEN
         render(mockGame());
         const squares = screen.getAllByRole('button', { name: '' });
@@ -151,6 +157,7 @@ describe('Game', () => {
       });
 
       it('should render game info with a button to jump to start', () => {
+        expect.assertions(1);
         // WHEN
         render(mockGame());
         const gameStartButton = screen.getByRole('button', { name: /go to game start/i });
@@ -160,6 +167,7 @@ describe('Game', () => {
       });
 
       it('should render game info with a status of X to go next (first)', () => {
+        expect.assertions(1);
         // WHEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -172,6 +180,7 @@ describe('Game', () => {
 
     describe('one move state', () => {
       it('should display O to go next', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -186,6 +195,7 @@ describe('Game', () => {
       });
 
       it('should display game start and move #1 history', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const gameStartButton = screen.queryByRole('button', { name: /go to game start/i });
@@ -208,6 +218,7 @@ describe('Game', () => {
       });
 
       it('should display a board where X has placed a move', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const squares = screen.getAllByRole('button', { name: '' });
@@ -221,6 +232,7 @@ describe('Game', () => {
       });
 
       it('should still say O is next, if O clicks on X\'s first move', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -237,6 +249,7 @@ describe('Game', () => {
       });
 
       it('should clear the board when clicking \'go to game start\' after the first move', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const squares = screen.getAllByRole('button', { name: '' });
@@ -255,6 +268,7 @@ describe('Game', () => {
 
     describe('winner state', () => {
       it('should display winner status after winning move', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
@@ -273,6 +287,7 @@ describe('Game', () => {
       });
 
       it('should display winner status even after post-win clicks', () => {
+        expect.assertions(1);
         // GIVEN
         render(mockGame());
         const statusDiv = screen.getByText(/next player/i);
