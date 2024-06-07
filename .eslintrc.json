@@ -10,6 +10,13 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "overrides": [
+    {
+      "files": ["**/*.spec.*"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/all"]
+    }
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
