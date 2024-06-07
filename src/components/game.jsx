@@ -3,6 +3,9 @@ import ordinal from 'ordinal';
 import Board from './board';
 import logger from '../utils/logger';
 
+const winnerPrefix = 'Winner:';
+const nextPlayerPrefix = 'Next Player V5:';
+
 export default class Game extends React.Component {
   static getWinner({ lineToCheck, squares }) {
     const [a, b, c] = lineToCheck;
@@ -127,9 +130,9 @@ export default class Game extends React.Component {
 
     let status;
     if (winner != null) {
-      status = `Winner: ${winner}`;
+      status = `${winnerPrefix} ${winner}`;
     } else {
-      status = `Next player v4: ${xIsNext ? 'X' : 'O'}`;
+      status = `${nextPlayerPrefix} ${xIsNext ? 'X' : 'O'}`;
     }
 
     // do the render

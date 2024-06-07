@@ -16,8 +16,9 @@ function mockBoard() {
   );
 }
 
-describe('Board', () => {
+describe('board', () => {
   it('should render a board', () => {
+    expect.assertions(1);
     // WHEN
     render(mockBoard());
     const boardElement = screen.getByTestId('board-base');
@@ -27,6 +28,7 @@ describe('Board', () => {
   });
 
   it('should render 3 rows of 3 empty squares for the board', () => {
+    expect.assertions(11);
     // WHEN
     render(mockBoard());
     const boardRows = screen.getByTestId('board-base').getElementsByClassName('board-row');
@@ -48,6 +50,7 @@ describe('Board', () => {
   });
 
   it('should run the square\'s onClick action', () => {
+    expect.assertions(2);
     // GIVEN
     render(mockBoard());
     const someSquare = screen.getAllByRole('button', { name: 'test' })[0];
@@ -57,6 +60,6 @@ describe('Board', () => {
     fireEvent.click(someSquare);
 
     // THEN
-    expect(mockOnClick).toHaveBeenCalled();
+    expect(mockOnClick).toHaveBeenCalledWith(expect.anything());
   });
 });
