@@ -18,6 +18,7 @@
 - [ ] All local checks pass on my machine.
 - [ ] I have adhered to the definition of done within the scope of.
 - [ ] I have updated the documentation accordingly.
+- [ ] I have left a comment self-reviewing my PR.
 
 ## Additional Notes
 
