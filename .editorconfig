@@ -1,14 +1,12 @@
 root = true
 
-# Matches all JavaScript and JSX files
-[*.{js,jsx}]
+[*]
 indent_style = space
 indent_size = 2
 end_of_line = lf
-insert_final_newline = true
+charset = utf-8
 trim_trailing_whitespace = true
+insert_final_newline = true
 
-# Matches the exact file .editorconfig
-[.editorconfig]
-indent_style = space
-indent_size = 2
+[*.md]
+trim_trailing_whitespace = false
