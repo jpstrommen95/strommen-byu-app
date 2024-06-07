@@ -15,9 +15,10 @@
     "lint:quiet": "npm run lint -- --quiet",
     "local-checks": "npm run build && npm run lint && npm run test:ci && echo 'Local checks passed!'",
     "serve": "npx serve -s build -l 3001",
+    "sort-package-json": "npx sort-package-json",
     "start": "react-scripts start",
-    "test:ci": "react-scripts test -- --config=jest.config.js --ci",
-    "test:local": "react-scripts test"
+    "test": "react-scripts test",
+    "test:ci": "react-scripts test -- --config=jest.config.js --ci"
   },
   "browserslist": {
     "production": [
