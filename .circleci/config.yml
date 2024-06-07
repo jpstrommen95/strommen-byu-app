@@ -1,0 +1,77 @@
+version: 2.1
+orbs:
+  node: circleci/node@5
+jobs:
+  lint-node:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+        pkg-manager: npm
+      - run:
+          name: Lint
+          command: npm run lint:ci
+  test-node:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Run tests
+          command: npm run test:ci
+  build-node:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run build:ci
+      - run:
+          name: Create the ~/artifacts directory if it doesn't exist
+          command: mkdir -p ~/artifacts
+      - run:
+          name: Copy artifacts
+          command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
+      - store_artifacts:
+          path: ~/artifacts
+          destination: node-build
+  deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: Announce Deployment
+          command: "echo Fake deploying from branch name: $CIRCLE_BRANCH!"
+      # - run:
+          # name: Deploy
+          # command: '#e.g. ./deploy.sh'
+workflows:
+  do-checks:
+    jobs:
+      - build-node:
+          requires: []
+      - lint-node:
+          requires:
+            - build-node
+      - test-node:
+          requires:
+            - lint-node
+      - hold-on-approval:
+          type: approval
+          filters:
+            branches:
+              only:
+                - prod
+                - dev
+          requires:
+            - test-node
+      - deploy:
+          filters:
+            branches:
+              only:
+                - prod
+                - dev
+          requires:
+            - hold-on-approval
