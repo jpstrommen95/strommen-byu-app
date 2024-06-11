@@ -3,9 +3,9 @@ const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 
 const argv = yargs(hideBin(process.argv))
+  .usage('Copies and commits files from source code repo to the appropriate production-assets repo.')
   .example('node ./commit-build-to-repo-b-copy.js --help', 'Display help.')
   .example('node ./commit-build-to-repo-b-copy.js -s dev -v v1.0.0', 'Typical usage.')
-  .alias('h', 'help') // give the default help flag a short alias
   .option('stage', {
     alias: 's',
     required: true,
@@ -17,6 +17,8 @@ const argv = yargs(hideBin(process.argv))
     required: true,
     description: 'Version number to use in the commit.',
   })
+  .alias('h', 'help') // boilerplate yargs
+  .wrap(120)
   .parse();
 
 console.log('hello world 2');
