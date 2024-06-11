@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
+const fs = require('fs-extra');
+const path = require('path');
 
 /** From semver.org, see also https://regex101.com/r/vkijKf/1/. */
 const semVerRegex = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
 const argv = yargs(hideBin(process.argv))
-  .usage('Copies and commits files from source code repo to the appropriate production-assets repo.')
+  .usage('Copies and commits files from source code repo to the appropriate hosting-assets repo.')
   .example('node ./commit-build-to-repo-b-copy.js --help', 'Display help.')
   .example('node ./commit-build-to-repo-b-copy.js -s dev -v v1.0.0', 'Typical usage.')
   .option('stage', {
@@ -40,11 +42,40 @@ const argv = yargs(hideBin(process.argv))
   .wrap(120)
   .parse();
 
-const { stage, version } = argv;
+function getRelPathToDestRepo({ stage }) {
+  switch (stage) {
+    case 'dev':
+      return '../dev-html-root';
+    case 'prod':
+      return '../prod-html-root';
+    default:
+      throw new Error(`Invalid stage provided: ${stage}`);
+  }
+}
+
+function validateRepos({ stage }) {
+  const srcCodeRepoDir = process.cwd();
+  const destRepoRelativePath = getRelPathToDestRepo({ stage });
+  const hostingAssetRepoDir = path.join(srcCodeRepoDir, destRepoRelativePath);
+  if (!fs.existsSync(hostingAssetRepoDir)) {
+    throw new Error(`Directory ${hostingAssetRepoDir} does not exist. Please ensure the appropriate hosting-assets repo is cloned as a sibling directory.`);
+  }
+
+  const buildDir = path.join(srcCodeRepoDir, 'build');
+  if (!fs.existsSync(buildDir)) {
+    throw new Error(`Build directory ${buildDir} does not exist. Please ensure you have built the project from the source code repo.`);
+  }
+}
 
 function main() {
-  console.log('hello world 2');
-  console.log(`running with ${JSON.stringify([stage, version], null, 2)}`);
+  const { stage, version } = argv;
+  try {
+    console.log(`Commencing script to commit ${stage} ${version} build.`);
+    console.log('Validating repos...');
+    validateRepos({ stage });
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
 }
 
 main();
