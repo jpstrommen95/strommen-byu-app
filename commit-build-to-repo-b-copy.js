@@ -53,10 +53,15 @@ function getRelPathToDestRepo({ stage }) {
   }
 }
 
-function validateRepos({ stage }) {
+function getRepoPaths({ stage }) {
   const srcCodeRepoDir = process.cwd();
   const destRepoRelativePath = getRelPathToDestRepo({ stage });
   const hostingAssetRepoDir = path.join(srcCodeRepoDir, destRepoRelativePath);
+
+  return { srcCodeRepoDir, hostingAssetRepoDir };
+}
+
+function validateRepos({ srcCodeRepoDir, hostingAssetRepoDir }) {
   if (!fs.existsSync(hostingAssetRepoDir)) {
     throw new Error(`Directory ${hostingAssetRepoDir} does not exist. Please ensure the appropriate hosting-assets repo is cloned as a sibling directory.`);
   }
@@ -67,12 +72,35 @@ function validateRepos({ stage }) {
   }
 }
 
+function shouldDelete(item) {
+  const filesToPreserve = [
+    '.git',
+    'readme.md',
+    '.cpanel.yml',
+    'license.md',
+  ];
+
+  return !filesToPreserve.includes(item);
+}
+
+function clearDestRepo({ hostingAssetRepoDir }) {
+  const repoBContents = fs.readdirSync(hostingAssetRepoDir);
+  const contentsToDelete = repoBContents.filter(shouldDelete);
+  contentsToDelete.forEach((item) => {
+    const itemPath = path.join(hostingAssetRepoDir, item);
+    fs.removeSync(itemPath);
+  });
+}
+
 function main() {
   const { stage, version } = argv;
   try {
     console.log(`Commencing script to commit ${stage} ${version} build.`);
+    const { srcCodeRepoDir, hostingAssetRepoDir } = getRepoPaths({ stage });
     console.log('Validating repos...');
-    validateRepos({ stage });
+    validateRepos({ srcCodeRepoDir, hostingAssetRepoDir });
+    console.log('Clearing destination repo...');
+    clearDestRepo({ hostingAssetRepoDir });
   } catch (error) {
     console.error('An error occurred:', error);
   }
