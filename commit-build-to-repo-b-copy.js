@@ -17,10 +17,13 @@ const argv = yargs(hideBin(process.argv))
     required: true,
     description: 'Version number to use in the commit.',
   })
-  .check(({ stage, version }) => {
-    console.log(`checking stage: ${JSON.stringify(stage, null, 2)}`);
-    console.log(`checking version: ${JSON.stringify(version, null, 2)}`);
-    throw new Error('not implemented yet');
+  .check(({ stage }) => {
+    if (!['dev', 'prod'].includes(stage)) {
+      throw new Error(`Invalid stage: ${stage}. Please use dev or prod.`);
+    }
+
+    console.log('Yargs check passed.');
+    return true;
   })
   .alias('h', 'help') // boilerplate yargs
   .wrap(120)
