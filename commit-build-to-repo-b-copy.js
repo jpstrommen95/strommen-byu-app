@@ -2,7 +2,9 @@
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 
-const argv = yargs(hideBin(process.argv)).version(false).alias('h', 'help')
+const argv = yargs(hideBin(process.argv))
+  .alias('h', 'help') // give the default help flag a short alias
+  .version(false) // ignore yargs v flag, so we can use a custom flag
   .option('version', {
     alias: 'v',
     required: true,
