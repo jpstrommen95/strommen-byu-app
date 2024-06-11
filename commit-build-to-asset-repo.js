@@ -3,6 +3,8 @@ const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 const fs = require('fs-extra');
 const path = require('path');
+const { execSync } = require('child_process');
+const moment = require('moment');
 
 /** From semver.org, see also https://regex101.com/r/vkijKf/1/. */
 const semVerRegex = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
@@ -10,7 +12,7 @@ const semVerRegex = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*
 const argv = yargs(hideBin(process.argv))
   .usage('Copies and commits files from source code repo to the appropriate hosting-assets repo.')
   .example('node ./commit-build-to-repo-b-copy.js --help', 'Display help.')
-  .example('node ./commit-build-to-repo-b-copy.js -s dev -v v1.0.0', 'Typical usage.')
+  .example('node ./commit-build-to-repo-b-copy.js -s dev -v 1.0.0', 'Typical usage.')
   .option('stage', {
     alias: 's',
     required: true,
@@ -103,6 +105,21 @@ function main() {
     clearDestRepo({ hostingAssetRepoDir });
     console.log('Copying build directory contents from source code repo to hosting assets repo...');
     fs.copySync(path.join(srcCodeRepoDir, 'build'), hostingAssetRepoDir);
+    console.log('Logging deployment...');
+    fs.appendFileSync(
+      path.join(hostingAssetRepoDir, 'latest-deployment.txt'),
+      `${moment().format()}\n`,
+      'utf8',
+    );
+    console.log('Changing directory...');
+    process.chdir(hostingAssetRepoDir);
+    console.log('Staging changes in hosting assets repo...');
+    execSync('git add .');
+    console.log('Committing changes in hosting assets repo...');
+    execSync(`git commit -m "v${version}"`);
+    console.log('Pushing changes to hosting assets repo...');
+    execSync('git push');
+    console.log('Done');
   } catch (error) {
     console.error('An error occurred:', error);
   }
