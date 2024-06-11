@@ -40,5 +40,11 @@ const argv = yargs(hideBin(process.argv))
   .wrap(120)
   .parse();
 
-console.log('hello world 2');
-console.log(`running with ${JSON.stringify(argv, null, 2)}`);
+const { stage, version } = argv;
+
+function main() {
+  console.log('hello world 2');
+  console.log(`running with ${JSON.stringify([stage, version], null, 2)}`);
+}
+
+main();
