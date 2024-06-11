@@ -101,6 +101,8 @@ function main() {
     validateRepos({ srcCodeRepoDir, hostingAssetRepoDir });
     console.log('Clearing destination repo...');
     clearDestRepo({ hostingAssetRepoDir });
+    console.log('Copying build directory contents from source code repo to hosting assets repo...');
+    fs.copySync(path.join(srcCodeRepoDir, 'build'), hostingAssetRepoDir);
   } catch (error) {
     console.error('An error occurred:', error);
   }
