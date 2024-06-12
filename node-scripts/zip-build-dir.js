@@ -10,7 +10,7 @@ const sourceDir = path.join(__dirname, '../build');
 const outputPath = path.join(__dirname, 'output/build.zip');
 
 const main = async () => {
-  logger.info('Starting deploy script.');
+  logger.info('Starting zip-build-dir script.');
   logger.info(`Zipping ${sourceDir} to ${outputPath}`);
 
   // Create a file to stream archive data to
