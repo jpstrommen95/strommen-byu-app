@@ -1,5 +1,4 @@
-// A helper script for `npm run build`.
-// isolated usage: `node ./scripts/deploy.js`
+// usage: `node ./scripts/zip-build-dir.js`
 
 const fs = require('fs');
 const archiver = require('archiver');
