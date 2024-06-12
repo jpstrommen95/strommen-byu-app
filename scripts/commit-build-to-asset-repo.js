@@ -11,9 +11,9 @@ const semVerRegex = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*
 
 const argv = yargs(hideBin(process.argv))
   .usage('Copies and commits files from source code repo to the appropriate hosting-assets repo.')
-  .example('node ./commit-build-to-asset-repo.js --help', 'Display help.')
-  .example('node ./commit-build-to-asset-repo.js -s dev -v 1.0.0', 'Local usage.')
-  .example('node ./commit-build-to-asset-repo.js -s dev -v 1.0.0 -c', 'CI/CD usage.')
+  .example('node ./scripts/commit-build-to-asset-repo.js --help', 'Display help.')
+  .example('node ./scripts/commit-build-to-asset-repo.js -s dev -v 1.0.0', 'Local usage.')
+  .example('node ./scripts/commit-build-to-asset-repo.js -s dev -v 1.0.0 -c', 'CI/CD usage.')
   .option('isCiCd', {
     alias: 'c',
     type: 'boolean',
