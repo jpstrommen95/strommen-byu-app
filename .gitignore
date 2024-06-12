@@ -117,7 +117,7 @@ junit.xml
 
 # production
 /build
-scripts/output
+node-scripts/output
 
 # misc
 .DS_Store
