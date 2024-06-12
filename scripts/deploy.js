@@ -4,7 +4,8 @@
 const fs = require('fs');
 const archiver = require('archiver');
 const path = require('path');
-const logger = require('../src/utils/logger');
+
+const logger = console;
 
 const sourceDir = path.join(__dirname, '../build');
 const outputPath = path.join(__dirname, 'output/build.zip');
@@ -21,7 +22,6 @@ const main = async () => {
   writeStream.on('close', () => {
     logger.info(`${archive.pointer()} total bytes`);
     logger.info('Archiver has been finalized and the output file descriptor has closed.');
-    logger.error('test error');
   });
   archive.on('error', (err) => { throw err; });
 
