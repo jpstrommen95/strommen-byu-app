@@ -124,7 +124,7 @@ function main() {
     }, null, 2));
     if (isCiCd) {
       console.log('Cloning repo...');
-      // TODO actually do that, refactor to use parent directory too
+      execSync('git clone https://github.com/strommen-byu/dev-html-root.git');
     } else {
       console.log('Validating repos...');
       validateRepos({ srcCodeRepoDir, hostingAssetRepoDir });
