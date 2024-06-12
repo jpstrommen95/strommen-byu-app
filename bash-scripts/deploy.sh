@@ -1,4 +1,6 @@
-STROMMEN_BYU_APP_VERSION=$(node ./scripts/print-p-json-version.js)
+# usage: `./bash-scripts/deploy.sh`
+
+STROMMEN_BYU_APP_VERSION=$(node ./node-scripts/print-p-json-version.js)
 STROMMEN_BYU_GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [ -z "$CIRCLE_BRANCH" ]; then
