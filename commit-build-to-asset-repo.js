@@ -11,9 +11,9 @@ const semVerRegex = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*
 
 const argv = yargs(hideBin(process.argv))
   .usage('Copies and commits files from source code repo to the appropriate hosting-assets repo.')
-  .example('node ./commit-build-to-repo-b-copy.js --help', 'Display help.')
-  .example('node ./commit-build-to-repo-b-copy.js -s dev -v 1.0.0', 'Local usage.')
-  .example('node ./commit-build-to-repo-b-copy.js -s dev -v 1.0.0 -c', 'CI/CD usage.')
+  .example('node ./commit-build-to-asset-repo.js --help', 'Display help.')
+  .example('node ./commit-build-to-asset-repo.js -s dev -v 1.0.0', 'Local usage.')
+  .example('node ./commit-build-to-asset-repo.js -s dev -v 1.0.0 -c', 'CI/CD usage.')
   .option('isCiCd', {
     alias: 'c',
     type: 'boolean',
@@ -108,7 +108,13 @@ function main() {
   } = argv;
   try {
     console.log(`Commencing script to commit ${stage} ${version} build ${isCiCd ? 'with' : 'without'} CI/CD.`);
+    const parentDir = path.join(process.cwd(), '..');
     const { srcCodeRepoDir, hostingAssetRepoDir } = getRepoPaths({ stage });
+    console.log(JSON.stringify({
+      parentDir,
+      srcCodeRepoDir,
+      hostingAssetRepoDir,
+    }, null, 2));
     if (isCiCd) {
       console.log('Cloning repo...');
       // TODO actually do that, refactor to use parent directory too
