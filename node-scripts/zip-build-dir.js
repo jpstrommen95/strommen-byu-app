@@ -1,16 +1,16 @@
-// A helper script for `npm run build`.
-// isolated usage: `node ./scripts/deploy.js`
+// usage: `node ./node-scripts/zip-build-dir.js`
 
 const fs = require('fs');
 const archiver = require('archiver');
 const path = require('path');
-const logger = require('../src/utils/logger');
+
+const logger = console;
 
 const sourceDir = path.join(__dirname, '../build');
 const outputPath = path.join(__dirname, 'output/build.zip');
 
 const main = async () => {
-  logger.info('Starting deploy script.');
+  logger.info('Starting zip-build-dir script.');
   logger.info(`Zipping ${sourceDir} to ${outputPath}`);
 
   // Create a file to stream archive data to
@@ -21,7 +21,6 @@ const main = async () => {
   writeStream.on('close', () => {
     logger.info(`${archive.pointer()} total bytes`);
     logger.info('Archiver has been finalized and the output file descriptor has closed.');
-    logger.error('test error');
   });
   archive.on('error', (err) => { throw err; });
 

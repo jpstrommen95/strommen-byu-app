@@ -42,11 +42,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run:
-          name: Announce Deployment
-          command: "echo Fake deploying from branch name: $CIRCLE_BRANCH!"
-      # - run:
-          # name: Deploy
-          # command: '#e.g. ./deploy.sh'
+          name: Run deploy script.
+          command: './deploy.sh'
 workflows:
   do-checks:
     jobs:
