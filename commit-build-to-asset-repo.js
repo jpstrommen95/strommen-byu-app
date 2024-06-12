@@ -61,12 +61,17 @@ function getRelPathToDestRepo({ stage }) {
   }
 }
 
+/** Assumes that you're already in the parent dir. */
 function getRepoPaths({ stage }) {
-  const srcCodeRepoDir = process.cwd();
-  const destRepoRelativePath = getRelPathToDestRepo({ stage });
-  const hostingAssetRepoDir = path.join(srcCodeRepoDir, destRepoRelativePath);
+  const parentRepoDir = process.cwd();
+  const srcCodeRepoDir = path.join(parentRepoDir, '/strommen-byu-app');
+  const hostingAssetRepoDir = path.join(srcCodeRepoDir, getRelPathToDestRepo({ stage }));
 
-  return { srcCodeRepoDir, hostingAssetRepoDir };
+  return {
+    parentRepoDir,
+    srcCodeRepoDir,
+    hostingAssetRepoDir,
+  };
 }
 
 function validateRepos({ srcCodeRepoDir, hostingAssetRepoDir }) {
@@ -108,10 +113,13 @@ function main() {
   } = argv;
   try {
     console.log(`Commencing script to commit ${stage} ${version} build ${isCiCd ? 'with' : 'without'} CI/CD.`);
+
     const parentDir = path.join(process.cwd(), '..');
-    const { srcCodeRepoDir, hostingAssetRepoDir } = getRepoPaths({ stage });
+    console.log('Changing to parent directory...');
+    process.chdir(parentDir);
+    const { parentRepoDir, srcCodeRepoDir, hostingAssetRepoDir } = getRepoPaths({ stage });
     console.log(JSON.stringify({
-      parentDir,
+      parentRepoDir,
       srcCodeRepoDir,
       hostingAssetRepoDir,
     }, null, 2));
@@ -132,7 +140,7 @@ function main() {
       `${moment().format()}\n`,
       'utf8',
     );
-    console.log('Changing directory...');
+    console.log('Changing to hosting assets directory...');
     process.chdir(hostingAssetRepoDir);
     console.log('Staging changes in hosting assets repo...');
     execSync('git add .');
