@@ -1,4 +1,4 @@
-// usage: `node ./scripts/print-p-json-version.js`
+// usage: `node ./node-scripts/print-p-json-version.js`
 
 const { version } = require('../package.json');
 

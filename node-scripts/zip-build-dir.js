@@ -1,4 +1,4 @@
-// usage: `node ./scripts/zip-build-dir.js`
+// usage: `node ./node-scripts/zip-build-dir.js`
 
 const fs = require('fs');
 const archiver = require('archiver');
