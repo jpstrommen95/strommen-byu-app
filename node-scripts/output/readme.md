@@ -1,3 +1,3 @@
-# Output of scripts
+# output
 
-This directory is a placeholder to store any output files from scripts.
+See [Confluence](https://strommen-byu.atlassian.net/wiki/spaces/KB/overview?homepageId=458973).
