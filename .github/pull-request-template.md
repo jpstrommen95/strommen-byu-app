@@ -10,7 +10,13 @@
 
 ## Screenshots / GIFs (if applicable)
 
-[Include any relevant screenshots or GIFs to visually demonstrate the changes]
+[Include any relevant screenshots or GIFs to visually demonstrate changes.]
+
+<details>
+<summary>Github Logo</summary>
+
+![image](https://github.com/jpstrommen95/strommen-byu-app/assets/55213152/d92a8f7b-5353-4a33-ac21-d367efdf2158)
+</details>
 
 ## Checklist
 
