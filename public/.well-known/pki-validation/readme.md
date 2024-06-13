@@ -1,3 +1,3 @@
-# PKI Validation
+# pki-validation
 
-This directory was initially empty, just some boilerplate that was included by cPanel by default.
+See [Confluence](https://strommen-byu.atlassian.net/wiki/spaces/KB/overview?homepageId=458973).
