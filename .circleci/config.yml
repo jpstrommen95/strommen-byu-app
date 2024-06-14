@@ -41,6 +41,9 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
       - run:
           name: Print message.
           command: 'echo Running deploy job from CircleCI.'
@@ -48,13 +51,16 @@ jobs:
           name: Print working directory.
           command: 'pwd'
       - run:
-          name: List files in bash-scripts directory pre-chmod
+          name: List files at top level.
+          command: 'ls -la'
+      - run:
+          name: List files in bash-scripts directory pre-chmod.
           command: ls -la ./bash-scripts
       - run:
-          name: Set execute permissions for deploy.sh
+          name: Set execute permissions for deploy.sh.
           command: chmod +x ./bash-scripts/deploy.sh
       - run:
-          name: List files in bash-scripts directory post-chmod
+          name: List files in bash-scripts directory post-chmod.
           command: ls -la ./bash-scripts
       - run:
           name: Run deploy script.
