@@ -48,6 +48,15 @@ jobs:
           name: Print working directory.
           command: 'pwd'
       - run:
+          name: List files in bash-scripts directory pre-chmod
+          command: ls -la ./bash-scripts
+      - run:
+          name: Set execute permissions for deploy.sh
+          command: chmod +x ./bash-scripts/deploy.sh
+      - run:
+          name: List files in bash-scripts directory post-chmod
+          command: ls -la ./bash-scripts
+      - run:
           name: Run deploy script.
           command: 'sh ./bash-scripts/deploy.sh'
 workflows:
