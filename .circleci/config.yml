@@ -42,8 +42,14 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run:
+          name: Print message.
+          command: 'echo Running deploy job from CircleCI.'
+      - run:
+          name: Print working directory.
+          command: 'pwd'
+      - run:
           name: Run deploy script.
-          command: './bash-scripts/deploy.sh'
+          command: 'sh ./bash-scripts/deploy.sh'
 workflows:
   do-checks:
     jobs:
