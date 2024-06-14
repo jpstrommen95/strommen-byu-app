@@ -43,7 +43,7 @@ jobs:
     steps:
       - run:
           name: Run deploy script.
-          command: './deploy.sh'
+          command: './bash-scripts/deploy.sh'
 workflows:
   do-checks:
     jobs:
