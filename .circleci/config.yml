@@ -41,6 +41,9 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
       - run:
           name: Print message.
           command: 'echo Running deploy job from CircleCI.'
