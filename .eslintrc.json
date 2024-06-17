@@ -31,5 +31,8 @@
     "react": {
       "version": "detect"
     }
+  },
+  "rules": {
+    "no-console": "off" // FIXME
   }
 }
