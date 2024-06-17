@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # usage: `./bash-scripts/deploy.sh`
-# ci usage: `sh ./bash-scripts/deploy.sh`
+# ci usage: `sudo ./bash-scripts/deploy.sh`
 
 # Exit script if you try to use an uninitialized variable.
 set -o nounset # ignore safeguard to support local usage, as CIRCLE_BRANCH is unset
