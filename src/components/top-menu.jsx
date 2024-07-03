@@ -9,6 +9,8 @@ function TopMenu() {
       <a
         className="link label-2"
         href="https://www.linkedin.com/in/justin-strommen-7563ba74"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         LinkedIn
       </a>
