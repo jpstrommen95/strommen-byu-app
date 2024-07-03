@@ -4,7 +4,7 @@ import TopMenu from './top-menu';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <TopMenu />
       <Game />
       {' '}

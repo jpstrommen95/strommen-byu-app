@@ -3,11 +3,11 @@ import React from 'react';
 function TopMenu() {
   return (
     <div className="top-menu">
-      <h1 className="display-1">
+      <h1 className="top-menu-name display-1">
         StrommenByu.com
       </h1>
       <a
-        className="link"
+        className="link label-2"
         href="https://www.linkedin.com/in/justin-strommen-7563ba74"
       >
         LinkedIn
