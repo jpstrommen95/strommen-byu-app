@@ -129,12 +129,12 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 }
 
 .link {
-  color: #FFFFFF;
+  color: var(--black-and-white-white, #FFF);
   text-decoration: none;
 }
 
 .link:hover {
-  color:#000000;
+  color: var(--black-and-white-black, #000);
   text-decoration: underline;
 }
 
