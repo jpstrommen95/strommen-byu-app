@@ -57,3 +57,13 @@ ol, ul {
 .display-1 {
   color: #FFFFFF;
 }
+
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.link:hover {
+  color:#000000;
+  text-decoration: underline;
+}
