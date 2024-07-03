@@ -1,61 +1,131 @@
-body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+/*
+Color Styles
+https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=2317-93
+*/
+.app {
+  --brand-100: #73ACE5;
+  --brand-300: #3D79B5;
+  --brand-500: #346395;
+  --brand-700: #2B4F78;
+  --success-100: #73E5BC;
+  --success-300: #3FB58A;
+  --success-500: #349472;
+  --success-700: #2A785B;
+  --info-100: #73DCE5;
+  --info-300: #3EABB5;
+  --info-500: #348A94;
+  --info-700: #297178;
+  --warn-100: #E5AD73;
+  --warn-300: #B57A3E;
+  --warn-500: #946534;
+  --warn-700: #785129;
+  --error-100: #E57373;
+  --error-300: #B53E3E;
+  --error-500: #943534;
+  --error-700: #782929;
+  --neutral-100: #E6E6E6;
+  --neutral-300: #B5B5B5;
+  --neutral-500: #949494;
+  --neutral-700: #787878;
+  --black-and-white-white: #FFF;
+  --black-and-white-black: #000;
 }
 
-ol, ul {
-    padding-left: 30px;
+/*
+Typography Styles
+https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=4311-96
+*/
+.display-1 {
+  font-family: "Carrois Gothic SC";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.board-row:after {
-    clear: both;
-    content: "";
-    display: table;
+.heading-1 {
+  font-family: "Carrois Gothic";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.status {
-    margin-bottom: 10px;
+.heading-2 {
+  font-family: "Carrois Gothic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
+.heading-3 {
+  font-family: "Carrois Gothic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.square:focus {
-    outline: none;
+.label-1 {
+  font-family: "Carrois Gothic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 
-.kbd-navigation .square:focus {
-    background: #ddd;
+.label-2 {
+  font-family: "Carrois Gothic";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.game {
-    display: flex;
-    flex-direction: row;
+.label-3 {
+  font-family: "Carrois Gothic";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.game-info {
-    margin-left: 20px;
+.paragraph-1 {
+  font-family: "Carrois Gothic";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
+
+.paragraph-2 {
+  font-family: "Space Mono";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Component Styles */
 
 .top-menu {
-  background-color: #346395;
-  padding: 0;
+  /* layout */
+  display: flex;
+  width: 1920px;
+  height: 100px;
+  padding: 8.5px 72px 8.5px 20px;
+  align-items: center;
+  gap: 1440px;
+  flex-shrink: 0;
+
+  /* style */
+  background: var(--brand-500, #346395);
 }
 
-.display-1 {
-  color: #FFFFFF;
+.top-menu-name {
+  color: var(--black-and-white-white, #FFF);
 }
 
 .link {
@@ -66,4 +136,57 @@ ol, ul {
 .link:hover {
   color:#000000;
   text-decoration: underline;
+}
+
+/* Deprecated Create-React-App Tutorial Styles */
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 0px;
+}
+
+ol, ul {
+  padding-left: 30px;
 }
