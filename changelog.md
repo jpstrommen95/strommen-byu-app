@@ -33,6 +33,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- none
+
+## [0.2.0] - 2024-07-05
+
+### Added
+
+- SBYU-93: top menu with title linked in logo
+
+## [0.1.6] - 2024-06-17
+
+### Changed
+
+- SBYU-81: experimented with pipeline and versioning - can print branch and version
+
 ## [0.1.0] - 2024-06-07
 
 ### Added
