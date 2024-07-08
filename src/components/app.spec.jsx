@@ -11,7 +11,7 @@ describe('app', () => {
     expect.assertions(1);
     // WHEN
     render(mockApp());
-    const topMenuElement = screen.getByRole('heading', /strommenbyu.com/i);
+    const topMenuElement = screen.queryByRole('heading', { name: /strommenbyu.com/i });
 
     // THEN
     expect(topMenuElement).toBeInTheDocument();
