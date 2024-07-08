@@ -4,6 +4,7 @@ import Game from './game';
 import TopMenu from './top-menu';
 import SideNavRail from './side-nav-rail';
 import HelloWorld from './hello-world';
+import VersionInfo from './version-info';
 
 function App() {
   return (
@@ -29,15 +30,7 @@ function App() {
         <Route path="/" element={<HelloWorld />} />
         <Route path="/about-me" element={<HelloWorld />} />
         <Route path="/games" element={<Game />} />
-        <Route
-          path="/version"
-          element={(
-            <div>
-              <h1>Version</h1>
-              <p>v0.0.0</p>
-            </div>
-          )}
-        />
+        <Route path="/version" element={<VersionInfo />} />
       </Routes>
     </div>
   );
