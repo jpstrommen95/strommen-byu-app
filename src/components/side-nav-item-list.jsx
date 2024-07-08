@@ -5,10 +5,11 @@ import SideNavItem from './side-nav-item';
 function SideNavItemList({ pageArray }) {
   return (
     <div className="side-nav-item-list">
-      {pageArray.map(({ name }) => (
+      {pageArray.map(({ name, routeTo }) => (
         <SideNavItem
-          name={name}
           key={name}
+          name={name}
+          routeTo={routeTo}
         />
       ))}
     </div>
@@ -18,6 +19,7 @@ function SideNavItemList({ pageArray }) {
 SideNavItemList.propTypes = {
   pageArray: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
+    routeTo: PropTypes.string,
   })).isRequired,
 };
 

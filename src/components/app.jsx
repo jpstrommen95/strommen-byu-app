@@ -11,9 +11,18 @@ function App() {
       <TopMenu />
       <SideNavRail
         pageArray={[
-          { name: 'About Me' },
-          { name: 'Games' },
-          { name: 'Version' },
+          {
+            name: 'About Me',
+            routeTo: '/about-me',
+          },
+          {
+            name: 'Games',
+            routeTo: '/games',
+          },
+          {
+            name: 'Version',
+            routeTo: '/version',
+          },
         ]}
       />
       <Routes>

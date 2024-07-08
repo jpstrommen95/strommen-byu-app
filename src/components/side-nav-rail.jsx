@@ -15,6 +15,7 @@ function SideNavRail({ pageArray }) {
 SideNavRail.propTypes = {
   pageArray: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
+    routeTo: PropTypes.string,
   })).isRequired,
 };
 
