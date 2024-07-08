@@ -33,13 +33,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- none
+- SBYU-94: side navigation rail - visual only
 
 ## [0.2.0] - 2024-07-05
 
 ### Added
 
-- SBYU-93: top menu with title linked in logo
+- SBYU-93: top menu with title & LinkedIn link
 
 ## [0.1.6] - 2024-06-17
 

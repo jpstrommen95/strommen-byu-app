@@ -35,6 +35,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=231
 Typography Styles
 https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=4311-96
 */
+/* Typography Styles - Display */
+
 .display-1 {
   font-family: "Carrois Gothic SC";
   font-size: 36px;
@@ -42,6 +44,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   font-weight: 400;
   line-height: normal;
 }
+
+/* Typography Styles - Heading */
 
 .heading-1 {
   font-family: "Carrois Gothic";
@@ -66,6 +70,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   font-weight: 400;
   line-height: normal;
 }
+
+/* Typography Styles - Label */
 
 .label-1 {
   font-family: "Carrois Gothic";
@@ -92,6 +98,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   line-height: normal;
 }
 
+/* Typography Styles - Paragraph */
+
 .paragraph-1 {
   font-family: "Carrois Gothic";
   font-size: 12px;
@@ -109,6 +117,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 }
 
 /* Component Styles */
+/* Component Styles - Nav */
+/* Component Styles - Nav - Top Menu*/
 
 .top-menu {
   /* layout */
@@ -138,7 +148,45 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   text-decoration: underline;
 }
 
-/* Deprecated Create-React-App Tutorial Styles */
+/* Component Styles - Nav - Side Rail */
+
+.side-nav-rail {
+  /* layout */
+  display: flex;
+  width: 264px;
+  height: 980px;
+  padding: 50px 20px 810px 20px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+
+  /* style */
+  background: var(--neutral-100, #E6E6E6);
+}
+
+.side-nav-item-list {
+  /* layout */
+  display: flex;
+  width: 224px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.side-nav-item {
+  color: var(--black-and-white-black, #000);
+}
+
+.side-nav-item-name {
+  color: var(--black-and-white-black, #000);
+}
+
+.side-nav-item-name:hover {
+  color: var(--brand-500)
+}
+
+/* Component Styles - Tic-tac-toe (patterns deprecated, do not copy) */
 
 .board-row:after {
   clear: both;
