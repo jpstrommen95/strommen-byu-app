@@ -29,9 +29,9 @@ describe('side nav item list', () => {
         { name: 'my test 2' },
       ],
     }));
-    const htmlElement = screen.queryAllByRole('heading', { name: /my test/i });
-    expect(htmlElement).toHaveLength(2);
-    expect(htmlElement[0]).toHaveTextContent(/my test 1/);
-    expect(htmlElement[1]).toHaveTextContent(/my test 2/);
+    const htmlElements = screen.queryAllByRole('heading', { name: /my test/i });
+    expect(htmlElements).toHaveLength(2);
+    expect(htmlElements[0]).toHaveTextContent(/my test 1/);
+    expect(htmlElements[1]).toHaveTextContent(/my test 2/);
   });
 });
