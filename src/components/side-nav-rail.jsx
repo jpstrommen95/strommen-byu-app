@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SideNavItemList from './side-nav-item-list';
 
 function SideNavRail({ pageArray }) {
   return (
     <div className="side-nav-rail">
-      {pageArray.map(({ name }) => (
-        <h1
-          className="label-1 side-nav-rail-name"
-          key={name}
-        >
-          {name}
-        </h1>
-      ))}
+      <SideNavItemList
+        pageArray={pageArray}
+      />
     </div>
   );
 }
