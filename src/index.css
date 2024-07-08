@@ -152,7 +152,25 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   background: var(--neutral-100, #E6E6E6);
 }
 
-.side-nav-rail-name:hover {
+.side-nav-item-list {
+  /* layout */
+  display: flex;
+  width: 224px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.side-nav-item {
+  color: var(--black-and-white-black, #000);
+}
+
+.side-nav-item-name {
+  color: var(--black-and-white-black, #000);
+}
+
+.side-nav-item-name:hover {
   color: var(--brand-500)
 }
 
