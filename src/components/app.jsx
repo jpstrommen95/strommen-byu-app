@@ -1,7 +1,9 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Game from './game';
 import TopMenu from './top-menu';
 import SideNavRail from './side-nav-rail';
+import HelloWorld from './hello-world';
 
 function App() {
   return (
@@ -14,8 +16,20 @@ function App() {
           { name: 'Version' },
         ]}
       />
-      <Game />
-      {' '}
+      <Routes>
+        <Route path="/" element={<HelloWorld />} />
+        <Route path="/about-me" element={<HelloWorld />} />
+        <Route path="/games" element={<Game />} />
+        <Route
+          path="/version"
+          element={(
+            <div>
+              <h1>Version</h1>
+              <p>v0.0.0</p>
+            </div>
+          )}
+        />
+      </Routes>
     </div>
   );
 }
