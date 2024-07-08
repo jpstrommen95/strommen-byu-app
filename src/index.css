@@ -186,7 +186,7 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   color: var(--brand-500)
 }
 
-/* Component Styles - Tic-tac-toe */
+/* Component Styles - Tic-tac-toe (patterns deprecated, do not copy) */
 
 .board-row:after {
   clear: both;
