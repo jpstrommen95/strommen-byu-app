@@ -3,13 +3,16 @@ import { render, screen } from '@testing-library/react';
 import {
   it, expect, describe,
 } from '@jest/globals';
+import { MemoryRouter } from 'react-router-dom';
 import SideNavItem from './side-nav-item';
 
 function mockComponent({ name }) {
   return (
-    <SideNavItem
-      name={name}
-    />
+    <MemoryRouter>
+      <SideNavItem
+        name={name}
+      />
+    </MemoryRouter>
   );
 }
 
