@@ -35,6 +35,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=231
 Typography Styles
 https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=4311-96
 */
+/* Typography Styles - Display */
+
 .display-1 {
   font-family: "Carrois Gothic SC";
   font-size: 36px;
@@ -42,6 +44,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   font-weight: 400;
   line-height: normal;
 }
+
+/* Typography Styles - Heading */
 
 .heading-1 {
   font-family: "Carrois Gothic";
@@ -66,6 +70,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   font-weight: 400;
   line-height: normal;
 }
+
+/* Typography Styles - Label */
 
 .label-1 {
   font-family: "Carrois Gothic";
@@ -92,6 +98,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   line-height: normal;
 }
 
+/* Typography Styles - Paragraph */
+
 .paragraph-1 {
   font-family: "Carrois Gothic";
   font-size: 12px;
@@ -109,6 +117,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 }
 
 /* Component Styles */
+/* Component Styles - Nav */
+/* Component Styles - Nav - Top Menu*/
 
 .top-menu {
   /* layout */
@@ -137,6 +147,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   color: var(--black-and-white-black, #000);
   text-decoration: underline;
 }
+
+/* Component Styles - Nav - Side Rail */
 
 .side-nav-rail {
   /* layout */
@@ -174,7 +186,7 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   color: var(--brand-500)
 }
 
-/* Deprecated Create-React-App Tutorial Styles */
+/* Component Styles - Tic-tac-toe */
 
 .board-row:after {
   clear: both;
