@@ -25,6 +25,7 @@
 - [ ] I have adhered to the definition of done within the scope of this work.
 - [ ] I have updated Confluence documentation as needed.
 - [ ] I have left a comment self-reviewing my PR.
+- [ ] I have updated the changelog.
 
 ## Additional Notes
 
