@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Game from './game';
 import TopMenu from './top-menu';
 import SideNavRail from './side-nav-rail';
-import HelloWorld from './hello-world';
 import VersionInfo from './version-info';
 import PageContent from './page-content';
 import AboutMeOverview from './about-me-overview';
