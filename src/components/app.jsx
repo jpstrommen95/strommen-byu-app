@@ -1,7 +1,11 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Game from './game';
 import TopMenu from './top-menu';
 import SideNavRail from './side-nav-rail';
+import VersionInfo from './version-info';
+import PageContent from './page-content';
+import AboutMeOverview from './about-me-overview';
 
 function App() {
   return (
@@ -9,13 +13,30 @@ function App() {
       <TopMenu />
       <SideNavRail
         pageArray={[
-          { name: 'About Me' },
-          { name: 'Games' },
-          { name: 'Version' },
+          {
+            name: 'About Me',
+            routeTo: '/about-me',
+          },
+          {
+            name: 'Games',
+            routeTo: '/games',
+          },
+          {
+            name: 'Version',
+            routeTo: '/version',
+          },
         ]}
       />
-      <Game />
-      {' '}
+      <PageContent
+        component={(
+          <Routes>
+            <Route path="/" element={<AboutMeOverview />} />
+            <Route path="/about-me" element={<AboutMeOverview />} />
+            <Route path="/games" element={<Game />} />
+            <Route path="/version" element={<VersionInfo />} />
+          </Routes>
+          )}
+      />
     </div>
   );
 }
