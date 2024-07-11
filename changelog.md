@@ -33,7 +33,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
 - SBYU-94: side navigation rail - visual only
+
+### Changed
+
+- SBYU-92: page content now navigates with react router
 
 ## [0.2.0] - 2024-07-05
 

@@ -3,13 +3,16 @@ import { render, screen } from '@testing-library/react';
 import {
   it, expect, describe,
 } from '@jest/globals';
+import { MemoryRouter } from 'react-router-dom';
 import SideNavRail from './side-nav-rail';
 
 function mockComponent({ pageArray }) {
   return (
-    <SideNavRail
-      pageArray={pageArray}
-    />
+    <MemoryRouter>
+      <SideNavRail
+        pageArray={pageArray}
+      />
+    </MemoryRouter>
   );
 }
 
