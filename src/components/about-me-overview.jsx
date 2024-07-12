@@ -1,6 +1,6 @@
 import React from 'react';
 import CryptoJS from 'crypto-js';
-import assetText from '../text/about-me-overview.json';
+import assetText from '../text/about-me.json';
 
 function AboutMeOverview() {
   const pComponents = assetText.map((content) => {
