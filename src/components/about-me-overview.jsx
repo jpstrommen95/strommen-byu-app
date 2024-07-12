@@ -1,11 +1,18 @@
 import React from 'react';
+import CryptoJS from 'crypto-js';
+import assetText from '../text/about-me-overview.json';
 
 function AboutMeOverview() {
+  const pComponents = assetText.map((content) => {
+    const hash = CryptoJS.MD5(content).toString();
+    return (
+      <p key={hash} className="paragraph-1">{content}</p>
+    );
+  });
+
   return (
     <div className="about-me-overview">
-      Justin Strommen is a disciple of Christ, software developer, and volunteer musician
-      dedicated to discovering universal principles through continuous learning
-      and applying them to his faith, career, and relationships.
+      {pComponents}
     </div>
   );
 }
