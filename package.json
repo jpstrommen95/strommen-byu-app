@@ -40,7 +40,10 @@
   },
   "dependencies": {
     "archiver": "^7.0.1",
+    "crypto-js": "^4.2.0",
     "fs-extra": "^11.2.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-ast": "^0.0.1",
     "moment": "^2.30.1",
     "ordinal": "^1.0.3",
     "prop-types": "^15.8.1",

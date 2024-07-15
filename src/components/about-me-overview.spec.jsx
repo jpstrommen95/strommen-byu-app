@@ -15,7 +15,7 @@ describe('about me overview', () => {
   it('renders the component', () => {
     expect.assertions(1);
     render(mockComponent());
-    const htmlElement = screen.queryByText(/justin strommen is a disciple/i);
+    const htmlElement = screen.queryByText(/Justin Strommen, a proud graduate/i);
     expect(htmlElement).toBeInTheDocument();
   });
 });
