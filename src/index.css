@@ -1,8 +1,13 @@
+body {
+  margin: 0px;
+}
+
 /*
 Color Styles
 https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=2317-93
 */
 .app {
+  /* Color Var Declarations */
   --brand-100: #73ACE5;
   --brand-300: #3D79B5;
   --brand-500: #346395;
@@ -29,6 +34,9 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=231
   --neutral-700: #787878;
   --black-and-white-white: #FFF;
   --black-and-white-black: #000;
+
+  /* layout */
+  height: 1000px;
 }
 
 /*
@@ -123,12 +131,12 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 .top-menu {
   /* layout */
   display: flex;
-  width: 1920px;
   height: 100px;
   padding: 8.5px 72px 8.5px 20px;
   align-items: center;
-  gap: 1440px;
+  gap: 1440px; /* FIXME relative sizing */
   flex-shrink: 0;
+  align-self: stretch;
 
   /* style */
   background: var(--brand-500, #346395);
@@ -157,6 +165,7 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   gap: 5px;
   flex: 1 0 0;
   align-self: stretch;
+  height: 100%;
 
   /* style */
   background: var(--neutral-700, #787878);
@@ -201,7 +210,7 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 
 /* Component Styles - Nav - Page Content */
 
-.page-content {
+.page-content { /* FIXME unused */
   /* Warn: drift from figma */
   flex-grow: 1;
   width: 1656px;
@@ -272,13 +281,4 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 
 .game-info {
   margin-left: 20px;
-}
-
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 0px;
-}
-
-ol, ul {
-  padding-left: 30px;
 }
