@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PageContent from './page-content';
 import SideNavRail from './side-nav-rail';
 
 function NavContentBody({ component, pageArray }) {
   return (
     <div className="nav-content-body">
       <SideNavRail pageArray={pageArray} />
-      <PageContent component={component} />
+      {component}
     </div>
   );
 }
