@@ -151,15 +151,15 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 /* Component Styles - Nav - Side Rail */
 
 .side-nav-rail {
-  /* Warn: drift from figma */
-  float: left;
+  /* layout */
   display: flex;
-  width: 264px;
-  height: 980px;
-  padding: 50px 20px 810px 20px;
+  padding: 50px 20px;
   flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+
+  /* style */
   background: var(--neutral-100, #E6E6E6);
 }
 
