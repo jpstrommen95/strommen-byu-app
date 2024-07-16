@@ -205,8 +205,9 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   /* layout */
   display: flex;
   padding: 10px;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   flex: 1 0 0;
 
