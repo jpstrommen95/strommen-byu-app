@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - SBYU-92: page content now navigates with react router
 - SBYU-103: about me content is now 5 word-crafted paragraphs
+- SBYU-104: about me content is now styled with rounded corner and large text
 
 ## [0.2.0] - 2024-07-05
 
