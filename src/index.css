@@ -299,6 +299,18 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 /* Component Styles - About Me */
 /* Component Styles - About Me - Overview */
 
+.about-me-full {
+  /* layout */
+  display: flex;
+  padding: 10px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  /* style */
+  background: var(--neutral-700, #787878);
+}
+
 .about-me-overview {
   /* layout */
   display: flex;
