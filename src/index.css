@@ -39,6 +39,64 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=231
   height: 1000px;
 }
 
+/* Color Styles - Text */
+
+.brand-100-text { color: var(--brand-100); }
+.brand-300-text { color: var(--brand-300); }
+.brand-500-text { color: var(--brand-500); }
+.brand-700-text { color: var(--brand-700); }
+.success-100-text { color: var(--success-100); }
+.success-300-text { color: var(--success-300); }
+.success-500-text { color: var(--success-500); }
+.success-700-text { color: var(--success-700); }
+.info-100-text { color: var(--info-100); }
+.info-300-text { color: var(--info-300); }
+.info-500-text { color: var(--info-500); }
+.info-700-text { color: var(--info-700); }
+.warn-100-text { color: var(--warn-100); }
+.warn-300-text { color: var(--warn-300); }
+.warn-500-text { color: var(--warn-500); }
+.warn-700-text { color: var(--warn-700); }
+.error-100-text { color: var(--error-100); }
+.error-300-text { color: var(--error-300); }
+.error-500-text { color: var(--error-500); }
+.error-700-text { color: var(--error-700); }
+.neutral-100-text { color: var(--neutral-100); }
+.neutral-300-text { color: var(--neutral-300); }
+.neutral-500-text { color: var(--neutral-500); }
+.neutral-700-text { color: var(--neutral-700); }
+.black-and-white-white-text { color: var(--black-and-white-white); }
+.black-and-white-black-text { color: var(--black-and-white-black); }
+
+/* Color Styles - Background */
+
+.brand-100-bg { background: var(--brand-100); }
+.brand-300-bg { background: var(--brand-300); }
+.brand-500-bg { background: var(--brand-500); }
+.brand-700-bg { background: var(--brand-700); }
+.success-100-bg { background: var(--success-100); }
+.success-300-bg { background: var(--success-300); }
+.success-500-bg { background: var(--success-500); }
+.success-700-bg { background: var(--success-700); }
+.info-100-bg { background: var(--info-100); }
+.info-300-bg { background: var(--info-300); }
+.info-500-bg { background: var(--info-500); }
+.info-700-bg { background: var(--info-700); }
+.warn-100-bg { background: var(--warn-100); }
+.warn-300-bg { background: var(--warn-300); }
+.warn-500-bg { background: var(--warn-500); }
+.warn-700-bg { background: var(--warn-700); }
+.error-100-bg { background: var(--error-100); }
+.error-300-bg { background: var(--error-300); }
+.error-500-bg { background: var(--error-500); }
+.error-700-bg { background: var(--error-700); }
+.neutral-100-bg { background: var(--neutral-100); }
+.neutral-300-bg { background: var(--neutral-300); }
+.neutral-500-bg { background: var(--neutral-500); }
+.neutral-700-bg { background: var(--neutral-700); }
+.black-and-white-white-bg { background: var(--black-and-white-white); }
+.black-and-white-black-bg { background: var(--black-and-white-black); }
+
 /*
 Typography Styles
 https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=4311-96
@@ -125,6 +183,23 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 }
 
 /* Component Styles */
+/* Component Styles - Shared */
+
+.shared-heading {
+  /* layout */
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  /* style */
+  border-radius: 15px;
+  background: var(--neutral-100);
+}
+
 /* Component Styles - Nav */
 /* Component Styles - Nav - Top Menu*/
 
@@ -223,6 +298,18 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 
 /* Component Styles - About Me */
 /* Component Styles - About Me - Overview */
+
+.about-me-full {
+  /* layout */
+  display: flex;
+  padding: 10px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  /* style */
+  background: var(--neutral-700, #787878);
+}
 
 .about-me-overview {
   /* layout */
