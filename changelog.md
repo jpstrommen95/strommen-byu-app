@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - SBYU-94: side navigation rail - visual only
+- SBYU-106: 'overview' heading added to about me content
 
 ### Changed
 
