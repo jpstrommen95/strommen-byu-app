@@ -1,6 +1,6 @@
 {
   "name": "strommen-byu-app",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "homepage": "http://strommenbyu.com",
   "scripts": {
@@ -40,12 +40,16 @@
   },
   "dependencies": {
     "archiver": "^7.0.1",
+    "crypto-js": "^4.2.0",
     "fs-extra": "^11.2.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-ast": "^0.0.1",
     "moment": "^2.30.1",
     "ordinal": "^1.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "yargs": "^17.7.2"
