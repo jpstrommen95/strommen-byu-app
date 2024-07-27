@@ -22,11 +22,22 @@ describe('top menu', () => {
     expect(topMenuElement).toHaveClass('top-menu-name');
   });
 
+  it('should render a link to message me', () => {
+    expect.assertions(2);
+    // WHEN
+    render(mockTopMenu());
+    const htmlElement = screen.queryByRole('link', { name: /message me/i });
+
+    // THEN
+    expect(htmlElement).toBeInTheDocument();
+    expect(htmlElement).toHaveClass('label-2');
+  });
+
   it('should render a link to linkedin', () => {
     expect.assertions(2);
     // WHEN
     render(mockTopMenu());
-    const htmlElement = screen.queryByRole('link', /linkedin/i);
+    const htmlElement = screen.queryByRole('link', { name: /linkedin/i });
 
     // THEN
     expect(htmlElement).toBeInTheDocument();
@@ -37,7 +48,7 @@ describe('top menu', () => {
     expect.assertions(1);
     // WHEN
     render(mockTopMenu());
-    const htmlElement = screen.queryByRole('link', /linkedin/i);
+    const htmlElement = screen.queryByRole('link', { name: /linkedin/i });
 
     // THEN
     expect(htmlElement.href).toMatch(/linkedin.com.*justin.*strommen/i);

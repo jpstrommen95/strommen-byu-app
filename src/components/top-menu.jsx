@@ -8,6 +8,14 @@ function TopMenu() {
       </h1>
       <a
         className="link label-2"
+        href="mailto:strommen-byu-contact-me@justin.strommen.us"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Message Me
+      </a>
+      <a
+        className="link label-2"
         href="https://www.linkedin.com/in/justin-strommen-7563ba74"
         target="_blank"
         rel="noopener noreferrer"
