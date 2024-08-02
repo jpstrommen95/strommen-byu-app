@@ -36,7 +36,9 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=231
   --black-and-white-black: #000;
 
   /* layout */
-  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Color Styles - Text */
@@ -206,12 +208,13 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 .top-menu {
   /* layout */
   display: flex;
-  height: 100px;
-  padding: 8.5px 72px 8.5px 20px;
+  min-height: 100px;
+  padding: 0px 20px;
   align-items: center;
+  align-content: center;
   gap: 30px;
-  flex-shrink: 0;
   align-self: stretch;
+  flex-wrap: wrap;
 
   /* style */
   background: var(--brand-500, #346395);
@@ -264,7 +267,6 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 .side-nav-item-list {
   /* layout */
   display: flex;
-  width: 224px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
