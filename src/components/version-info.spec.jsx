@@ -58,7 +58,7 @@ describe('version info', () => {
     setupLocation({ href: 'https://strommenbyu.com/about-me?abc=true' });
     render(mockComponent());
     const stageElement = screen.queryByText(stageRegex);
-    expect(stageElement).toHaveTextContent('prod');
+    expect(stageElement).toBeNull();
   });
 
   it('should identify an unknown env', () => {
