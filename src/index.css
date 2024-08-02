@@ -348,6 +348,10 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 
 /* Component Styles - Tic-tac-toe (patterns deprecated, do not copy) */
 
+.board-row {
+  min-width: 99px;
+}
+
 .board-row:after {
   clear: both;
   content: "";
