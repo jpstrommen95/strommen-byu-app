@@ -12,7 +12,7 @@ function urlToStage() {
   }
 
   if (/^https?:\/\/strommenbyu.com/.test(url)) {
-    return 'prod';
+    return '';
   }
 
   return 'unknown';

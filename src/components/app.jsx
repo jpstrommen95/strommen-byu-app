@@ -5,6 +5,7 @@ import TopMenu from './top-menu';
 import VersionInfo from './version-info';
 import AboutMeOverview from './about-me-overview';
 import NavContentBody from './nav-content-body';
+import PageContent from './page-content';
 
 function App() {
   return (
@@ -29,8 +30,8 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutMeOverview />} />
             <Route path="/about-me" element={<AboutMeOverview />} />
-            <Route path="/games" element={<Game />} />
-            <Route path="/version" element={<VersionInfo />} />
+            <Route path="/games" element={<PageContent component={<Game />} />} />
+            <Route path="/version" element={<PageContent component={<VersionInfo />} />} />
           </Routes>
           )}
       />

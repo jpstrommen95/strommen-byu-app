@@ -220,7 +220,25 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   background: var(--brand-500, #346395);
 }
 
+.top-logo { /* FIXME - drift from figma*/
+  /* behavior */
+  pointer-events: none;
+
+  /* layout */
+  height: 50px;
+  padding: 10px;
+
+  /* style */
+  border-radius: 25px;
+  background: var(--black-and-white-white, #FFF);
+}
+
+
 .top-menu-name {
+  /* behavior */
+  pointer-events: none;
+
+  /* style */
   color: var(--black-and-white-white, #FFF);
 }
 
@@ -287,15 +305,21 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 
 /* Component Styles - Nav - Page Content */
 
-.page-content { /* FIXME unused */
+.page-content {
   /* Warn: drift from figma */
-  flex-grow: 1;
-  width: 1656px;
-  height: 980px;
+
+  /* layout */
+  display: flex;
+  padding: 10px 20px;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  background: #FFF;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+
+  /* style */
+  border-radius: 25px;
+  background: var(--black-and-white-white, #FFF);
 }
 
 /* Component Styles - About Me */
@@ -329,6 +353,10 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 }
 
 /* Component Styles - Tic-tac-toe (patterns deprecated, do not copy) */
+
+.board-row {
+  min-width: 99px;
+}
 
 .board-row:after {
   clear: both;
