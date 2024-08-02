@@ -22,6 +22,14 @@ function TopMenu() {
       >
         LinkedIn
       </a>
+      <a
+        className="link label-2"
+        href="https://docs.google.com/document/d/1gdMGqxt4xQ2wO9bin61Q3-OdAIHB0B-3zxw3-rifxn0/edit?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Career CV
+      </a>
     </div>
   );
 }
