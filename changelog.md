@@ -35,6 +35,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - none
 
+## [1.0.0] - 2024-08-01
+
+### Added
+
+- SBYU-108: top menu link to send an email
+- SBYU-0: MVP logo image
+- SBYU-0: Link to CV
+
+### Changed
+
+- SBYU-113: CSS formatting now generally supports mobile
+- SBYU-0: The games and version pages have improved color accessibility.
+- SBYU-0: Tic-tac-toe rows are now preserved on small screens.
+
 ## [0.3.0] - 2024-07-23
 
 ### Added
