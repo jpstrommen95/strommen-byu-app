@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - SBYU-108: top menu link to send an email
 - SBYU-0: MVP logo image
+- SBYU-0: Link to CV
 
 ### Changed
 
