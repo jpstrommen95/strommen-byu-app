@@ -220,7 +220,25 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
   background: var(--brand-500, #346395);
 }
 
+.top-logo { /* FIXME - drift from figma*/
+  /* behavior */
+  pointer-events: none;
+
+  /* layout */
+  height: 50px;
+  padding: 10px;
+
+  /* style */
+  border-radius: 25px;
+  background: var(--black-and-white-white, #FFF);
+}
+
+
 .top-menu-name {
+  /* behavior */
+  pointer-events: none;
+
+  /* style */
   color: var(--black-and-white-white, #FFF);
 }
 

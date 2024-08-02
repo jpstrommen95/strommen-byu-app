@@ -1,8 +1,10 @@
 import React from 'react';
+import logo from '../images/sbyu-square-logo-trans-512.svg';
 
 function TopMenu() {
   return (
     <div className="top-menu">
+      <img src={logo} alt="logo.svg" className="top-logo" />
       <h1 className="top-menu-name display-1">
         StrommenByu.com
       </h1>
