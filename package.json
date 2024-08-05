@@ -1,6 +1,6 @@
 {
   "name": "strommen-byu-app",
-  "version": "1.0.0",
+  "version": "1.0.0-dev-sbyu-128",
   "private": true,
   "homepage": "http://strommenbyu.com",
   "scripts": {
