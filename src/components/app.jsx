@@ -36,7 +36,9 @@ function App() {
             <Route path="/" element={<AboutMeOverview />} />
             <Route path="/about-me" element={<AboutMeOverview />} />
             <Route path="/games" element={<PageContent component={<Game />} />} />
+            <Route path="/i-made-that-up.org" element={<PageContent component={<Relationships />} />} />
             <Route path="/i-made-that-up" element={<PageContent component={<Relationships />} />} />
+            <Route path="/imadethatup.org" element={<PageContent component={<Relationships />} />} />
             <Route path="/imadethatup" element={<PageContent component={<Relationships />} />} />
             <Route path="/relationships" element={<PageContent component={<Relationships />} />} />
             <Route path="/version" element={<PageContent component={<VersionInfo />} />} />
