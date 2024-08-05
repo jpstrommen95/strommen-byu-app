@@ -292,6 +292,8 @@ https://www.figma.com/design/rA3HpXiwjwn1FSrD0nfiGD/strommen-byu-app?node-id=431
 }
 
 .side-nav-item {
+  max-width: 150px; /* FIXME Drift from figma */
+
   color: var(--black-and-white-black, #000);
 }
 
