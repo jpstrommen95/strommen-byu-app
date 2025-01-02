@@ -15,10 +15,13 @@ function SharedFormShortAnswer({
     setResponse(event.target.value.trimStart());
   };
 
+  const inputId = label.replace(/\s+/g, '-').toLowerCase(); // Replace spaces with hyphens and convert to lowercase
+
   return (
     <div className="short-form-description">
-      <label htmlFor="description">{label}</label>
+      <label htmlFor={inputId}>{label}</label>
       <input
+        id={inputId}
         type="text"
         autoComplete={autoComplete || null}
         maxLength={maxCharacters}
