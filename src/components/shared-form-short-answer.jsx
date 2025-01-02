@@ -15,6 +15,13 @@ function SharedFormShortAnswer({
     setResponse(event.target.value.trimStart());
   };
 
+  /**
+   * Debugging Tip
+   * If you encounter issues with labels containing special characters (e.g., My Label!),
+   * you may need a more robust id sanitization function to strip invalid characters:
+   *
+   * `const sanitizeId = (text) => text.replace(/[^a-z0-9-_]/gi, '').toLowerCase();`
+   */
   const inputId = label.replace(/\s+/g, '-').toLowerCase(); // Replace spaces with hyphens and convert to lowercase
 
   return (
