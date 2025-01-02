@@ -18,8 +18,8 @@ function mockComponent({ placeholder, label, maxCharacters }) {
 describe('shared form short answer', () => {
   it('renders the component', () => {
     expect.assertions(1);
-    render(mockComponent({ label: 'my label' }));
-    const htmlElement = screen.queryByRole('input', { name: /my label/i }); // FIXME find the actual role
+    render(mockComponent({ label: 'my label', placeholder: 'my placeholder' }));
+    const htmlElement = screen.queryByLabelText('my label');
     expect(htmlElement).toBeInTheDocument();
   });
 });
