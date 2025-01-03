@@ -6,7 +6,7 @@ const DEFAULT_MAX_CHARACTERS = 100;
 function SharedFormShortAnswer({
   autoComplete,
   label,
-  maxCharacters = DEFAULT_MAX_CHARACTERS,
+  maxCharacters,
   placeholder,
 }) {
   const [response, setResponse] = useState('');
