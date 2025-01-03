@@ -69,7 +69,7 @@ describe('shared form short answer', () => {
     expect.assertions(1);
     render(mockDefaultComponent({ label: 'my label', placeholder: 'my placeholder' }));
     const inputElement = screen.queryByLabelText('my label');
-    userEvent.type(inputElement, 'AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyz');
-    expect(inputElement).toHaveValue('AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuv');
+    userEvent.type(inputElement, 'AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyz'); // type 26 * 4 = 104 characters
+    expect(inputElement).toHaveValue('AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuv'); // cut off at 100 characters, excluding wxyz
   });
 });
