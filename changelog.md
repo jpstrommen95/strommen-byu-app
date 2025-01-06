@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - SBYU-128: Relationships tab
 - SBYU-117: Relationships short answer questions
+- SBYU-105: Server now supports non-root page loading. Ex. strommenbyu.com/about-me
 
 ## [1.0.0] - 2024-08-01
 
