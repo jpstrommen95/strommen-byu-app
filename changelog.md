@@ -33,6 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- none
+
+## [1.1.0] - 2025-01-10
+
 ### Added
 
 - SBYU-128: Relationships tab
