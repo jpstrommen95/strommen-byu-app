@@ -1,3 +1,19 @@
 # php -- BEGIN cPanel-generated handler, do not edit
 # This domain inherits the “PHP” package.
 # php -- END cPanel-generated handler, do not edit
+
+RewriteEngine On
+RewriteBase /
+
+# Ensure root index.html requests are served normally
+RewriteRule ^index\.html$ - [L]
+
+# Allow direct access to actual existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Exclude assets like CSS, JS, and images from redirect
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
+
+# Redirect all other requests to index.html (so react router can take over)
+RewriteRule . /index.html [L]
