@@ -35,6 +35,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- SBYU-135: Fishers Cleanup tab
+
+## [1.1.0] - 2025-01-10
+
+### Added
+
 - SBYU-128: Relationships tab
 - SBYU-117: Relationships short answer questions
 - SBYU-105: Server now supports non-root page loading. Ex. strommenbyu.com/about-me
