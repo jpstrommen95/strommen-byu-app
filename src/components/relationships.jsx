@@ -1,10 +1,33 @@
 import React from 'react';
 import SharedFormShortAnswer from './shared-form-short-answer';
+import SharedFormRankingSlider from './shared-form-ranking-slider';
+import SharedFormRankingHolder from './shared-form-ranking-holder';
 
 function Relationships() {
   return (
     <div className="relationships-container">
       <p>Hello, let&apos;s talk about relationships.</p>
+      <hr />
+      <SharedFormRankingHolder />
+      <hr />
+      <SharedFormRankingSlider label="Looks" range="1-10" />
+      <SharedFormRankingSlider label="Street smart" range="1-5" />
+      <SharedFormRankingSlider label="Book smart" range="1-5" />
+      <SharedFormRankingSlider label="Proactive" range="1-5" />
+      <SharedFormRankingSlider label="Outdoorsy" range="1-5" />
+      <SharedFormRankingSlider label="Chill" range="1-5" />
+      <SharedFormRankingSlider label="Edifying" range="1-5" />
+      <SharedFormRankingSlider label="Happy" range="1-10" />
+      <SharedFormRankingSlider label="Sports" range="1-5" />
+      <SharedFormRankingSlider label="Extreme sports" range="1-5" />
+      <SharedFormRankingSlider label="Organized" range="1-5" />
+      <SharedFormRankingSlider label="Controlled" range="1-5" />
+      <SharedFormRankingSlider label="Cooking" range="1-5" />
+      <SharedFormRankingSlider label="Parents" range="1-3" />
+      <SharedFormRankingSlider label="Financial" range="1-5" />
+      <SharedFormRankingSlider label="Mature" range="1-5" />
+      <SharedFormRankingSlider label="Humor" range="1-5" />
+      <hr />
       <SharedFormShortAnswer
         label="What is your first name?"
         placeholder="First Name"
@@ -78,6 +101,8 @@ function Relationships() {
         placeholder="Activity Openness"
         maxCharacters={40}
       />
+
+      <hr />
     </div>
   );
 }
