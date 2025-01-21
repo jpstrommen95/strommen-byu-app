@@ -19,6 +19,10 @@ function App() {
             routeTo: '/about-me',
           },
           {
+            name: 'Fishers Cleanup',
+            routeTo: '/fishers',
+          },
+          {
             name: 'Games',
             routeTo: '/games',
           },
@@ -35,6 +39,7 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutMeOverview />} />
             <Route path="/about-me" element={<AboutMeOverview />} />
+            <Route path="/fishers" element={<PageContent component={<h1>Fishers</h1>} />} />
             <Route path="/games" element={<PageContent component={<Game />} />} />
             <Route path="/i-made-that-up.org" element={<PageContent component={<Relationships />} />} />
             <Route path="/i-made-that-up" element={<PageContent component={<Relationships />} />} />
