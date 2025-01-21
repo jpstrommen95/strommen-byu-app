@@ -40,7 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutMeOverview />} />
             <Route path="/about-me" element={<AboutMeOverview />} />
-            <Route path="/fishers" element={<PageContent component={<Fishers />} />} />
+            <Route path="/fishers" element={<Fishers />} />
             <Route path="/games" element={<PageContent component={<Game />} />} />
             <Route path="/i-made-that-up.org" element={<PageContent component={<Relationships />} />} />
             <Route path="/i-made-that-up" element={<PageContent component={<Relationships />} />} />
