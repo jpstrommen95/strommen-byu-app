@@ -17,6 +17,11 @@ function Fishers() {
           Please select 1 or 2 days for your family to participate in cleaning the church.
           I feel that using this approach lets you choose your timing according
           to your schedule and let&apos;s you know which task you will perform that day.
+          <br />
+          <br />
+          Thanks,
+          <br />
+          Brother Randy Strommen
         </p>
         <ul className="fishers-list">
           <li className="fishers-list-item">
