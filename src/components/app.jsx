@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Fishers from './fishers';
 import Game from './game';
 import TopMenu from './top-menu';
 import VersionInfo from './version-info';
@@ -19,6 +20,10 @@ function App() {
             routeTo: '/about-me',
           },
           {
+            name: 'Fishers Cleanup',
+            routeTo: '/fishers',
+          },
+          {
             name: 'Games',
             routeTo: '/games',
           },
@@ -35,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutMeOverview />} />
             <Route path="/about-me" element={<AboutMeOverview />} />
+            <Route path="/fishers" element={<Fishers />} />
             <Route path="/games" element={<PageContent component={<Game />} />} />
             <Route path="/i-made-that-up.org" element={<PageContent component={<Relationships />} />} />
             <Route path="/i-made-that-up" element={<PageContent component={<Relationships />} />} />

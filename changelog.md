@@ -35,6 +35,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - none
 
+## [1.2.0] - 2025-01-23
+
+### Added
+
+- SBYU-135: Fishers Cleanup tab
+
 ## [1.1.0] - 2025-01-10
 
 ### Added
