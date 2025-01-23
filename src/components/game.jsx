@@ -4,7 +4,7 @@ import Board from './board';
 import logger from '../utils/logger';
 
 const winnerPrefix = 'Winner:';
-const nextPlayerPrefix = 'Next Player V5:';
+const nextPlayerPrefix = 'Next Player:';
 
 export default class Game extends React.Component {
   static getWinner({ lineToCheck, squares }) {
