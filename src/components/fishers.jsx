@@ -29,21 +29,6 @@ function Fishers() {
               Meetinghouse Cleanup - Feb 1 (Saturday)
             </a>
           </li>
-          <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467971-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 8 (Saturday)
-            </a>
-          </li>
-          <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467969-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 15 (Saturday)
-            </a>
-          </li>
-          <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467992-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 22 (Saturday)
-            </a>
-          </li>
         </ul>
       </div>
     </div>
