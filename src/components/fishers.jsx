@@ -25,8 +25,8 @@ function Fishers() {
         </p>
         <ul className="fishers-list">
           <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467937-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 1 (Saturday)
+            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-56273712-meetinghouse#/" target="_blank" rel="noreferrer" className="fishers-link">
+              Meetinghouse Cleanup - SignUp
             </a>
           </li>
         </ul>
