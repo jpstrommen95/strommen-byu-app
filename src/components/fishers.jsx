@@ -11,12 +11,12 @@ function Fishers() {
       />
       <div className="page-content">
         <p className="paragraph-1">
-          It is time for our 2nd Ward families to sign up
-          for our meetinghouse cleaning days in February.
-          I&apos;ve prepared a SignUp page for each Saturday in February.
+          It is time for our 2nd Ward families to sign up for our meetinghouse cleaning days.
+          I&apos;ve prepared a SignUp page for each Saturday for our assignment.
           Please select 1 or 2 days for your family to participate in cleaning the church.
-          I feel that using this approach lets you choose your timing according
-          to your schedule and let&apos;s you know which task you will perform that day.
+          I feel that using this approach lets you choose your timing according to your schedule
+          and lets you know which task you will perform that day.
+          Our ward is assigned to clean the church in February, May, August, and November.
           <br />
           <br />
           Thanks,
@@ -25,23 +25,8 @@ function Fishers() {
         </p>
         <ul className="fishers-list">
           <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467937-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 1 (Saturday)
-            </a>
-          </li>
-          <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467971-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 8 (Saturday)
-            </a>
-          </li>
-          <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467969-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 15 (Saturday)
-            </a>
-          </li>
-          <li className="fishers-list-item">
-            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-54467992-meetinghouse" target="_blank" rel="noreferrer" className="fishers-link">
-              Meetinghouse Cleanup - Feb 22 (Saturday)
+            <a href="https://www.signupgenius.com/go/60B0449AFAA29ABFD0-56273712-meetinghouse#/" target="_blank" rel="noreferrer" className="fishers-link">
+              Meetinghouse Cleanup - SignUp
             </a>
           </li>
         </ul>
